@@ -1,6 +1,13 @@
 function goTo(id) {
-  document.querySelectorAll('.screen').forEach(screen => {
-    screen.classList.remove('active');
-  });
-  document.getElementById(id).classList.add('active');
+  console.log("Navigating to:", id);
+
+  const screens = document.querySelectorAll(".screen");
+  screens.forEach(screen => screen.classList.remove("active"));
+
+  const target = document.getElementById(id);
+  if (target) {
+    target.classList.add("active");
+  } else {
+    console.error("Screen not found:", id);
+  }
 }
