@@ -6,11 +6,16 @@
 <title>Swathi Senthil Kumar | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#020617;color:#e5e7eb}
 .app{max-width:1200px;margin:0 auto}
+.card i{
+  font-size:2.4rem;
+  color:#38bdf8;
+}
 
 /* NAV */
 .navbar{
@@ -102,6 +107,7 @@ embed{width:100%;height:80vh;border:none}
   <button onclick="go('projects')">Projects</button>
   <button onclick="go('certificates')">Certificates</button>
   <button onclick="go('resume')">Resume</button>
+  <button onclick="go('contact')">Contact</button>
 </nav>
 
 <!-- HOME / ABOUT -->
@@ -222,6 +228,43 @@ embed{width:100%;height:80vh;border:none}
   <embed src="resume.pdf">
 </section>
 
+<!-- CONTACT -->
+<section id="contact" class="screen">
+  <h2 style="text-align:center">Contact Me</h2>
+
+  <p style="text-align:center;max-width:700px;margin:20px auto;line-height:1.7">
+    Feel free to reach out to me for job opportunities, internships, collaborations,
+    or professional discussions. I am always open to learning and connecting.
+  </p>
+
+  <div class="grid">
+
+    <!-- PHONE -->
+    <a class="card" href="tel:+916369304900">
+      <h3><i class="fas fa-phone"></i></h3>
+      <p>Phone</p>
+    </a>
+
+    <!-- EMAIL -->
+    <a class="card" href="mailto:swathisenthilkumar017@gmail.com">
+      <h3><i class="fas fa-envelope"></i></h3>
+      <p>Email</p>
+    </a>
+
+    <!-- LINKEDIN -->
+    <a class="card" href="https://www.linkedin.com/in/swathi-s-7788b5269" target="_blank">
+      <h3><i class="fab fa-linkedin"></i></h3>
+      <p>LinkedIn</p>
+    </a>
+
+    <!-- GITHUB -->
+    <a class="card" href="https://github.com/Swazk" target="_blank">
+      <h3><i class="fab fa-github"></i></h3>
+      <p>GitHub</p>
+    </a>
+
+  </div>
+</section>
 </div>
 
 <!-- MODAL -->
