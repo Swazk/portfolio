@@ -1,252 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Swathi Senthil Kumar | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swathi Senthil Kumar | Portfolio</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#020617;color:#e5e7eb}
+.navbar{display:flex;gap:12px;padding:15px;background:#020617;position:sticky;top:0}
+.navbar h2{color:#38bdf8;margin-right:auto}
+.navbar button{border:1px solid #38bdf8;background:none;color:#38bdf8;padding:6px 14px;border-radius:20px;cursor:pointer}
 
-    body {
-      background: radial-gradient(circle at top, #0f172a, #020617);
-      color: #e5e7eb;
-      min-height: 100vh;
-    }
+.screen{display:none;padding:60px 20px;text-align:center}
+.screen.active{display:block}
 
-    /* NAVBAR */
-    .navbar {
-      display: flex;
-      gap: 12px;
-      padding: 15px 20px;
-      background: #020617;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+.grid{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:40px}
 
-    .navbar h2 {
-      color: #38bdf8;
-      margin-right: auto;
-    }
+.card{width:240px;min-height:140px;background:#0f172a;border-radius:16px;padding:20px;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.card h3{color:#38bdf8;margin-bottom:8px}
 
-    .navbar button {
-      background: transparent;
-      border: 1px solid #38bdf8;
-      color: #38bdf8;
-      padding: 6px 14px;
-      border-radius: 20px;
-      cursor: pointer;
-    }
-
-    /* SCREENS */
-    .screen {
-      display: none;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .screen.active {
-      display: block;
-      animation: fade 0.4s ease;
-    }
-
-    @keyframes fade {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* TEXT */
-    .title {
-      font-size: 2.2rem;
-      color: #38bdf8;
-    }
-
-    .subtitle {
-      margin-top: 10px;
-      opacity: 0.9;
-    }
-
-    .desc {
-      max-width: 720px;
-      margin: 20px auto;
-      line-height: 1.6;
-    }
-
-    /* CARDS */
-    .grid {
-      display: flex;
-      gap: 30px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 40px;
-    }
-
-    .card {
-      width: 240px;
-      min-height: 140px;
-      background: linear-gradient(145deg, #020617, #0f172a);
-      border-radius: 16px;
-      padding: 20px;
-      cursor: pointer;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card h3 {
-      color: #38bdf8;
-      margin-bottom: 6px;
-    }
-
-    /* BUTTONS */
-    .btn {
-      margin-top: 40px;
-      padding: 12px 26px;
-      background: #38bdf8;
-      color: #020617;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .link {
-      display: inline-block;
-      margin-top: 16px;
-      color: #38bdf8;
-      text-decoration: none;
-    }
-  </style>
+.btn{margin-top:40px;padding:12px 26px;background:#38bdf8;color:#020617;border:none;border-radius:8px;cursor:pointer}
+.link{display:inline-block;margin-top:15px;color:#38bdf8;text-decoration:none}
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
-  <h2>Swathi S</h2>
-  <button data-target="home">Home</button>
-  <button data-target="projects">Projects</button>
-  <button data-target="certificates">Certificates</button>
-  <button data-target="resume">Resume</button>
+<h2>Swathi S</h2>
+<button onclick="go('home')">Home</button>
+<button onclick="go('projects')">Projects</button>
+<button onclick="go('certificates')">Certificates</button>
 </nav>
 
 <!-- HOME -->
-<section class="screen active" id="home">
-  <h1 class="title">Swathi Senthil Kumar</h1>
-  <p class="subtitle">
-    B.Tech IT (2025) • Software • Cloud • AI/ML • Data Analytics
-  </p>
+<section id="home" class="screen active">
+<h1 style="color:#38bdf8">Swathi Senthil Kumar</h1>
+<p>B.Tech IT (2025) • Software • Cloud • AI/ML • Data Analytics</p>
 
-  <p class="desc">
-    B.Tech Information Technology graduate with strong foundations in software development, cloud computing, AI/ML, and data analytics.
-  </p>
-
-  <div class="grid">
-    <div class="card" data-target="projects">
-      <h3>Projects</h3>
-    </div>
-    <div class="card" data-target="certificates">
-      <h3>Certificates</h3>
-    </div>
-    <div class="card" data-target="resume">
-      <h3>Resume</h3>
-    </div>
-  </div>
+<div class="grid">
+<div class="card" onclick="go('projects')"><h3>Projects</h3></div>
+<div class="card" onclick="go('certificates')"><h3>Certificates</h3></div>
+</div>
 </section>
 
 <!-- PROJECTS -->
-<section class="screen" id="projects">
-  <h2>Projects</h2>
+<section id="projects" class="screen">
+<h2>Projects</h2>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Google GenAI Capstone</h3>
-      <a class="link" href="https://github.com/Swazk/Personal-Health-Guardian" target="_blank">
-        GitHub →
-      </a>
-    </div>
+<div class="grid">
+<div class="card" onclick="go('genai')"><h3>Google GenAI Capstone</h3></div>
+<div class="card" onclick="go('chatbot')"><h3>AI Wellness Chatbot</h3></div>
+<div class="card" onclick="go('fraud')"><h3>Fraud Detection</h3></div>
+<div class="card" onclick="go('mern')"><h3>MERN Freelancing</h3></div>
+<div class="card" onclick="go('gan')"><h3>GAN AI (TNSDC)</h3></div>
+</div>
 
-    <div class="card">
-      <h3>AI Wellness Chatbot</h3>
-      <a class="link" href="https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-" target="_blank">
-        GitHub →
-      </a>
-    </div>
+<button class="btn" onclick="go('home')">Back</button>
+</section>
 
-    <div class="card">
-      <h3>Fraud Detection</h3>
-      <a class="link" href="https://github.com/Swazk/fraud-detection-risk-analysis" target="_blank">
-        GitHub →
-      </a>
-    </div>
+<!-- PROJECT DETAILS -->
+<section id="genai" class="screen">
+<h2>Google GenAI Capstone – Personal Health Guardian</h2>
+<p>Built a GenAI-based health assistant using prompt engineering and LLM concepts.</p>
+<a class="link" href="https://github.com/Swazk/Personal-Health-Guardian" target="_blank">GitHub Link</a>
+<button class="btn" onclick="go('projects')">Back</button>
+</section>
 
-    <div class="card">
-      <h3>MERN Freelancing</h3>
-      <a class="link" href="https://github.com/dharshinijayaraj/freelancing_website" target="_blank">
-        GitHub →
-      </a>
-    </div>
+<section id="chatbot" class="screen">
+<h2>AI Wellness Chatbot (Final Year)</h2>
+<p>NLP-based chatbot for early-stage depression detection.</p>
+<a class="link" href="https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-" target="_blank">GitHub Link</a>
+<button class="btn" onclick="go('projects')">Back</button>
+</section>
 
-    <div class="card">
-      <h3>GAN AI (TNSDC)</h3>
-      <a class="link" href="https://github.com/Swazk/TNSDC-GAN-AI" target="_blank">
-        GitHub →
-      </a>
-    </div>
-  </div>
+<section id="fraud" class="screen">
+<h2>Fraud Detection Analysis</h2>
+<p>ML pipeline with EDA, feature engineering and Tableau dashboards.</p>
+<a class="link" href="https://github.com/Swazk/fraud-detection-risk-analysis" target="_blank">GitHub Link</a>
+<button class="btn" onclick="go('projects')">Back</button>
+</section>
 
-  <button class="btn" data-target="home">Back</button>
+<section id="mern" class="screen">
+<h2>MERN Freelancing Platform</h2>
+<p>Group project using React, Node, Express and MongoDB.</p>
+<a class="link" href="https://github.com/dharshinijayaraj/freelancing_website" target="_blank">GitHub Link</a>
+<button class="btn" onclick="go('projects')">Back</button>
+</section>
+
+<section id="gan" class="screen">
+<h2>GAN AI Project (TNSDC)</h2>
+<p>Generative AI project using GAN concepts.</p>
+<a class="link" href="https://github.com/Swazk/TNSDC-GAN-AI" target="_blank">GitHub Link</a>
+<button class="btn" onclick="go('projects')">Back</button>
 </section>
 
 <!-- CERTIFICATES -->
-<section class="screen" id="certificates">
-  <h2>Certificates</h2>
+<section id="certificates" class="screen">
+<h2>Certificates</h2>
 
-  <p class="desc">
-    Google Cloud (Generative AI, LLMs) • AWS • Oracle • Cisco (CCNA) • TCS • Deloitte • JPMorgan • Infosys
-  </p>
+<div class="grid">
+<div class="card" onclick="go('cert-google')"><h3>Google GenAI</h3></div>
+<div class="card" onclick="go('cert-tcs')"><h3>TCS</h3></div>
+<div class="card" onclick="go('cert-aws')"><h3>AWS</h3></div>
+<div class="card" onclick="go('cert-oracle')"><h3>Oracle</h3></div>
+<div class="card" onclick="go('cert-cisco')"><h3>Cisco</h3></div>
+</div>
 
-  <p class="desc">
-    Certificate images can be added later without breaking navigation.
-  </p>
-
-  <button class="btn" data-target="home">Back</button>
+<button class="btn" onclick="go('home')">Back</button>
 </section>
 
-<!-- RESUME -->
-<section class="screen" id="resume">
-  <h2>Resume</h2>
-
-  <p class="desc">
-    Resume will be uploaded soon.
-  </p>
-
-  <button class="btn" data-target="home">Back</button>
-</section>
+<!-- CERT DETAILS -->
+<section id="cert-google" class="screen"><h2>Google Generative AI Certificate</h2><p>GenAI, LLMs, Responsible AI</p><button class="btn" onclick="go('certificates')">Back</button></section>
+<section id="cert-tcs" class="screen"><h2>TCS Certificate</h2><p>Cybersecurity & GenAI Virtual Internship</p><button class="btn" onclick="go('certificates')">Back</button></section>
+<section id="cert-aws" class="screen"><h2>AWS Certificate</h2><p>Cloud Practitioner & DevOps Essentials</p><button class="btn" onclick="go('certificates')">Back</button></section>
+<section id="cert-oracle" class="screen"><h2>Oracle Certificate</h2><p>AI Foundations & Data Science</p><button class="btn" onclick="go('certificates')">Back</button></section>
+<section id="cert-cisco" class="screen"><h2>Cisco Certificate</h2><p>CCNA & Networking Basics</p><button class="btn" onclick="go('certificates')">Back</button></section>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const triggers = document.querySelectorAll("[data-target]");
-    const screens = document.querySelectorAll(".screen");
-
-    triggers.forEach(el => {
-      el.addEventListener("click", function () {
-        const id = this.getAttribute("data-target");
-        screens.forEach(s => s.classList.remove("active"));
-        document.getElementById(id).classList.add("active");
-      });
-    });
-  });
+function go(id){
+document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
 </script>
 
 </body>
