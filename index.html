@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Swathi Senthil Kumar | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -107,28 +107,24 @@ embed{width:100%;height:80vh;border:none}
 <!-- HOME / ABOUT -->
 <section id="home" class="screen active">
   <h1 style="color:#38bdf8">Swathi Senthil Kumar</h1>
-  <p>B.Tech Information Technology (2025)</p>
-  <p><strong>Software • Cloud • AI/ML • Data Analytics</strong></p>
+  <p><strong>B.Tech Information Technology (2025)</strong></p>
+  <p>Software • Cloud • AI/ML • Data Analytics</p>
 
-  <br>
-
-  <p style="max-width:900px;line-height:1.7">
-    I am a B.Tech Information Technology graduate with strong foundations in software development, cloud computing, artificial intelligence, and data analytics. 
-    I have hands-on experience through internships, certifications, and real-world academic projects. 
-    I enjoy building practical solutions using modern technologies and continuously upskilling to stay aligned with industry standards.
+  <p style="max-width:900px;line-height:1.7;margin-top:20px">
+    I am a B.Tech Information Technology graduate with strong foundations in software development, cloud computing, artificial intelligence, and data analytics.
+    I have hands-on experience through internships, industry-recognized certifications and real-world academic projects.
+    I enjoy building practical, scalable solutions using modern technologies and continuously upskilling to stay aligned with industry standards.
   </p>
 
   <div class="grid">
     <div class="card" onclick="go('projects')">
       <h3>Projects</h3>
-      <p>AI, ML, cloud, and full-stack applications with GitHub code.</p>
+      <p>AI, ML, cloud, and full-stack applications with GitHub source code.</p>
     </div>
-
     <div class="card" onclick="go('certificates')">
       <h3>Certificates</h3>
       <p>Professional certifications from TCS, AWS, Oracle, Cisco, and more.</p>
     </div>
-
     <div class="card" onclick="go('resume')">
       <h3>Resume</h3>
       <p>View and download my latest resume.</p>
@@ -143,39 +139,27 @@ embed{width:100%;height:80vh;border:none}
   <div class="grid">
     <div class="card" onclick="window.open('https://github.com/Swazk/Personal-Health-Guardian')">
       <h3>Google GenAI – Personal Health Guardian</h3>
-      <p>
-        A generative AI-based healthcare assistant developed during the Google GenAI capstone program. 
-        The system uses prompt engineering and LLM concepts to provide health-related guidance and information.
-      </p>
+      <p>Generative AI healthcare assistant built using LLM concepts and prompt engineering.</p>
     </div>
 
     <div class="card" onclick="window.open('https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-')">
       <h3>AI Wellness Chatbot</h3>
-      <p>
-        Final year project focused on psychological wellness using NLP techniques.
-        The chatbot provides supportive conversations and mental wellness insights.
-      </p>
+      <p>NLP-based chatbot focused on psychological wellness and supportive conversations.</p>
     </div>
 
     <div class="card" onclick="window.open('https://github.com/Swazk/fraud-detection-risk-analysis')">
       <h3>Fraud Detection & Risk Analysis</h3>
-      <p>
-        Data analytics and machine learning project involving fraud pattern detection, exploratory data analysis, and visualization using Python and Tableau.
-      </p>
+      <p>Machine learning and data analytics project with EDA and visualization.</p>
     </div>
 
     <div class="card" onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')">
       <h3>MERN Freelancing Platform</h3>
-      <p>
-        A full-stack web application built using MongoDB, Express, React, and Node.js to connect freelancers with clients. Developed as a group project.
-      </p>
+      <p>Full-stack freelancing platform using MongoDB, Express, React, and Node.js.</p>
     </div>
 
     <div class="card" onclick="window.open('https://github.com/Swazk/TNSDC-GAN-AI')">
       <h3>GAN AI Project (TNSDC)</h3>
-      <p>
-        Generative Adversarial Network (GAN) project completed under the TNSDC AI program, focusing on generative models and AI fundamentals.
-      </p>
+      <p>Generative Adversarial Network project under TNSDC AI program.</p>
     </div>
   </div>
 </section>
@@ -185,43 +169,92 @@ embed{width:100%;height:80vh;border:none}
   <h2>Certificates</h2>
 
   <div class="grid">
-    <div class="card" onclick="openCert('tcs-1.pdf')"><h3>TCS</h3></div>
-    <div class="card" onclick="openCert('aws-1.pdf')"><h3>AWS</h3></div>
-    <div class="card" onclick="openCert('oracle-1.pdf')"><h3>Oracle</h3></div>
-    <div class="card" onclick="openCert('cisco-1.pdf')"><h3>Cisco</h3></div>
-    <div class="card" onclick="openCert('infosys-1.pdf')"><h3>Infosys</h3></div>
-    <div class="card" onclick="openCert('jpm-1.pdf')"><h3>JPMorgan</h3></div>
-    <div class="card" onclick="openCert('deloitte-1.pdf')"><h3>Deloitte</h3></div>
+    <div class="card" onclick="go('cert-tcs')"><h3>TCS</h3></div>
+    <div class="card" onclick="go('cert-aws')"><h3>AWS</h3></div>
+    <div class="card" onclick="go('cert-oracle')"><h3>Oracle</h3></div>
+    <div class="card" onclick="go('cert-cisco')"><h3>Cisco</h3></div>
+    <div class="card" onclick="go('cert-others')"><h3>Others</h3></div>
+  </div>
+</section>
+
+<!-- CERT LISTS -->
+<section id="cert-tcs" class="screen">
+  <div class="grid">
+    <div class="card" onclick="openCert('tcs-1.pdf')">TCS Certificate 1</div>
+    <div class="card" onclick="openCert('tcs-2.pdf')">TCS Certificate 2</div>
+    <div class="card" onclick="openCert('tcs-3.pdf')">TCS Certificate 3</div>
+  </div>
+</section>
+
+<section id="cert-aws" class="screen">
+  <div class="grid">
+    <div class="card" onclick="openCert('aws-1.pdf')">AWS Certificate 1</div>
+    <div class="card" onclick="openCert('aws-2.pdf')">AWS Certificate 2</div>
+  </div>
+</section>
+
+<section id="cert-oracle" class="screen">
+  <div class="grid">
+    <div class="card" onclick="openCert('oracle-1.pdf')">Oracle Certificate 1</div>
+    <div class="card" onclick="openCert('oracle-2.pdf')">Oracle Certificate 2</div>
+    <div class="card" onclick="openCert('oracle-3.pdf')">Oracle Certificate 3</div>
+  </div>
+</section>
+
+<section id="cert-cisco" class="screen">
+  <div class="grid">
+    <div class="card" onclick="openCert('cisco-1.pdf')">Cisco Certificate 1</div>
+    <div class="card" onclick="openCert('cisco-2.pdf')">Cisco Certificate 2</div>
+  </div>
+</section>
+
+<section id="cert-others" class="screen">
+  <div class="grid">
+    <div class="card" onclick="openCert('infosys-1.pdf')">Infosys</div>
+    <div class="card" onclick="openCert('jpm-1.pdf')">JPMorgan</div>
+    <div class="card" onclick="openCert('jpm-2.pdf')">JPMorgan</div>
+    <div class="card" onclick="openCert('deloitte-1.pdf')">Deloitte</div>
   </div>
 </section>
 
 <!-- RESUME -->
 <section id="resume" class="screen">
-  <h2>Resume</h2>
   <embed src="resume.pdf">
 </section>
 
 </div>
 
-<!-- CERTIFICATE MODAL -->
+<!-- MODAL -->
 <div id="modal" class="modal" onclick="closeModal()">
   <div class="modal-content" onclick="event.stopPropagation()">
     <embed id="modalFile">
-    <br><br>
-    <a id="downloadBtn" download style="color:#020617;font-weight:600">Download Certificate</a>
+    <a id="downloadBtn" download>Download Certificate</a>
   </div>
 </div>
 
 <script>
-function go(id){
+function showScreen(id){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
+  const el=document.getElementById(id);
+  if(el) el.classList.add('active');
 }
+
+function go(id){ location.hash=id; }
+
+window.addEventListener('hashchange',()=>{
+  const page=location.hash.replace('#','')||'home';
+  showScreen(page);
+});
+
+window.addEventListener('load',()=>{
+  const page=location.hash.replace('#','')||'home';
+  showScreen(page);
+});
 
 function openCert(file){
   document.getElementById('modal').classList.add('active');
-  document.getElementById('modalFile').src = file;
-  document.getElementById('downloadBtn').href = file;
+  document.getElementById('modalFile').src=file;
+  document.getElementById('downloadBtn').href=file;
 }
 
 function closeModal(){
