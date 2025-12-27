@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Swathi Senthil Kumar | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -13,28 +13,45 @@ body{background:#020617;color:#e5e7eb}
 .app{max-width:1200px;margin:0 auto}
 
 /* NAV */
-.navbar{display:flex;gap:12px;padding:16px}
+.navbar{
+  display:flex;
+  gap:12px;
+  padding:16px;
+  align-items:center;
+}
 .navbar h2{color:#38bdf8;margin-right:auto}
-.navbar button{background:none;border:1px solid #38bdf8;color:#38bdf8;padding:6px 14px;border-radius:20px;cursor:pointer}
+.navbar button{
+  background:none;
+  border:1px solid #38bdf8;
+  color:#38bdf8;
+  padding:6px 14px;
+  border-radius:20px;
+  cursor:pointer;
+}
 
 /* SCREENS */
-.screen{display:none;padding:60px 20px;text-align:center}
+.screen{display:none;padding:60px 20px}
 .screen.active{display:block}
 
 /* GRID + CARD */
-.grid{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+.grid{
+  display:flex;
+  gap:30px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
 
 .card{
-  width:260px;
+  width:280px;
   background:#0f172a;
   border-radius:16px;
-  padding:20px;
+  padding:22px;
   cursor:pointer;
   box-shadow:0 12px 30px rgba(0,0,0,.6);
   transition:transform .3s ease, box-shadow .3s ease;
 }
 
-/* 3D HOVER (DESKTOP ONLY) */
 @media (hover:hover){
   .card:hover{
     transform:translateY(-10px) rotateX(8deg);
@@ -42,20 +59,10 @@ body{background:#020617;color:#e5e7eb}
   }
 }
 
-.card h3{color:#38bdf8}
+.card h3{color:#38bdf8;margin-bottom:10px}
+.card p{font-size:.95rem;line-height:1.5}
 
-/* BUTTON */
-.btn{
-  margin-top:30px;
-  padding:12px 26px;
-  background:#38bdf8;
-  color:#020617;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-}
-
-/* MODAL (FULL SCREEN VIEWER) */
+/* MODAL */
 .modal{
   display:none;
   position:fixed;
@@ -66,9 +73,7 @@ body{background:#020617;color:#e5e7eb}
   align-items:center;
   padding:20px;
 }
-
 .modal.active{display:flex}
-
 .modal-content{
   width:90%;
   max-width:900px;
@@ -76,19 +81,12 @@ body{background:#020617;color:#e5e7eb}
   border-radius:12px;
   padding:10px;
 }
-
-embed{
-  width:100%;
-  height:80vh;
-  border:none;
-}
+embed{width:100%;height:80vh;border:none}
 
 /* MOBILE */
 @media(max-width:768px){
   .grid{flex-direction:column;align-items:center}
   .card{width:90%}
-  .navbar{flex-wrap:wrap;justify-content:center}
-  .navbar h2{width:100%;text-align:center}
   embed{height:65vh}
 }
 </style>
@@ -106,29 +104,80 @@ embed{
   <button onclick="go('resume')">Resume</button>
 </nav>
 
-<!-- HOME -->
+<!-- HOME / ABOUT -->
 <section id="home" class="screen active">
   <h1 style="color:#38bdf8">Swathi Senthil Kumar</h1>
-  <p>B.Tech IT (2025) • Software • Cloud • AI/ML • Data Analytics</p>
+  <p>B.Tech Information Technology (2025)</p>
+  <p><strong>Software • Cloud • AI/ML • Data Analytics</strong></p>
+
+  <br>
+
+  <p style="max-width:900px;line-height:1.7">
+    I am a B.Tech Information Technology graduate with strong foundations in software development, cloud computing, artificial intelligence, and data analytics. 
+    I have hands-on experience through internships, certifications, and real-world academic projects. 
+    I enjoy building practical solutions using modern technologies and continuously upskilling to stay aligned with industry standards.
+  </p>
 
   <div class="grid">
-    <div class="card" onclick="go('projects')"><h3>Projects</h3></div>
-    <div class="card" onclick="go('certificates')"><h3>Certificates</h3></div>
-    <div class="card" onclick="go('resume')"><h3>Resume</h3></div>
+    <div class="card" onclick="go('projects')">
+      <h3>Projects</h3>
+      <p>AI, ML, cloud, and full-stack applications with GitHub code.</p>
+    </div>
+
+    <div class="card" onclick="go('certificates')">
+      <h3>Certificates</h3>
+      <p>Professional certifications from TCS, AWS, Oracle, Cisco, and more.</p>
+    </div>
+
+    <div class="card" onclick="go('resume')">
+      <h3>Resume</h3>
+      <p>View and download my latest resume.</p>
+    </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="screen">
   <h2>Projects</h2>
+
   <div class="grid">
-    <div class="card" onclick="window.open('https://github.com/Swazk/Personal-Health-Guardian')"><h3>Google GenAI</h3></div>
-    <div class="card" onclick="window.open('https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-')"><h3>AI Wellness Chatbot</h3></div>
-    <div class="card" onclick="window.open('https://github.com/Swazk/fraud-detection-risk-analysis')"><h3>Fraud Detection</h3></div>
-    <div class="card" onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')"><h3>MERN Freelancing</h3></div>
-    <div class="card" onclick="window.open('https://github.com/Swazk/TNSDC-GAN-AI')"><h3>GAN AI</h3></div>
+    <div class="card" onclick="window.open('https://github.com/Swazk/Personal-Health-Guardian')">
+      <h3>Google GenAI – Personal Health Guardian</h3>
+      <p>
+        A generative AI-based healthcare assistant developed during the Google GenAI capstone program. 
+        The system uses prompt engineering and LLM concepts to provide health-related guidance and information.
+      </p>
+    </div>
+
+    <div class="card" onclick="window.open('https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-')">
+      <h3>AI Wellness Chatbot</h3>
+      <p>
+        Final year project focused on psychological wellness using NLP techniques.
+        The chatbot provides supportive conversations and mental wellness insights.
+      </p>
+    </div>
+
+    <div class="card" onclick="window.open('https://github.com/Swazk/fraud-detection-risk-analysis')">
+      <h3>Fraud Detection & Risk Analysis</h3>
+      <p>
+        Data analytics and machine learning project involving fraud pattern detection, exploratory data analysis, and visualization using Python and Tableau.
+      </p>
+    </div>
+
+    <div class="card" onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')">
+      <h3>MERN Freelancing Platform</h3>
+      <p>
+        A full-stack web application built using MongoDB, Express, React, and Node.js to connect freelancers with clients. Developed as a group project.
+      </p>
+    </div>
+
+    <div class="card" onclick="window.open('https://github.com/Swazk/TNSDC-GAN-AI')">
+      <h3>GAN AI Project (TNSDC)</h3>
+      <p>
+        Generative Adversarial Network (GAN) project completed under the TNSDC AI program, focusing on generative models and AI fundamentals.
+      </p>
+    </div>
   </div>
-  <button class="btn" onclick="go('home')">Back</button>
 </section>
 
 <!-- CERTIFICATES -->
@@ -144,28 +193,22 @@ embed{
     <div class="card" onclick="openCert('jpm-1.pdf')"><h3>JPMorgan</h3></div>
     <div class="card" onclick="openCert('deloitte-1.pdf')"><h3>Deloitte</h3></div>
   </div>
-
-  <button class="btn" onclick="go('home')">Back</button>
 </section>
 
 <!-- RESUME -->
 <section id="resume" class="screen">
   <h2>Resume</h2>
   <embed src="resume.pdf">
-  <br>
-  <a href="resume.pdf" download class="btn">Download Resume</a>
-  <br><br>
-  <button class="btn" onclick="go('home')">Back</button>
 </section>
 
 </div>
 
-<!-- FULL SCREEN CERT MODAL -->
+<!-- CERTIFICATE MODAL -->
 <div id="modal" class="modal" onclick="closeModal()">
   <div class="modal-content" onclick="event.stopPropagation()">
     <embed id="modalFile">
-    <a id="downloadBtn" class="btn" download>Download</a>
-    <button class="btn" onclick="closeModal()">Close</button>
+    <br><br>
+    <a id="downloadBtn" download style="color:#020617;font-weight:600">Download Certificate</a>
   </div>
 </div>
 
