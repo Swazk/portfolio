@@ -24,6 +24,49 @@ body{background:#020617;color:#e5e7eb}
 
 .btn{margin-top:40px;padding:12px 26px;background:#38bdf8;color:#020617;border:none;border-radius:8px;cursor:pointer}
 .link{display:inline-block;margin-top:15px;color:#38bdf8;text-decoration:none}
+/* 🔹 MOBILE RESPONSIVE FIX */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .navbar h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .screen {
+    padding: 40px 15px;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    width: 90%;
+    max-width: 280px;
+  }
+}
 </style>
 </head>
 
