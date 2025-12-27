@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Swathi Senthil Kumar | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -12,28 +12,84 @@
 body{background:#020617;color:#e5e7eb}
 .app{max-width:1200px;margin:0 auto}
 
+/* NAV */
 .navbar{display:flex;gap:12px;padding:16px}
 .navbar h2{color:#38bdf8;margin-right:auto}
 .navbar button{background:none;border:1px solid #38bdf8;color:#38bdf8;padding:6px 14px;border-radius:20px;cursor:pointer}
 
+/* SCREENS */
 .screen{display:none;padding:60px 20px;text-align:center}
 .screen.active{display:block}
 
+/* GRID + CARD */
 .grid{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:40px}
 
-.card{width:260px;background:#0f172a;border-radius:16px;padding:20px;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.6)}
+.card{
+  width:260px;
+  background:#0f172a;
+  border-radius:16px;
+  padding:20px;
+  cursor:pointer;
+  box-shadow:0 12px 30px rgba(0,0,0,.6);
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+
+/* 3D HOVER (DESKTOP ONLY) */
+@media (hover:hover){
+  .card:hover{
+    transform:translateY(-10px) rotateX(8deg);
+    box-shadow:0 25px 50px rgba(0,0,0,.8);
+  }
+}
+
 .card h3{color:#38bdf8}
 
-.btn{margin-top:40px;padding:12px 26px;background:#38bdf8;color:#020617;border:none;border-radius:8px;cursor:pointer}
+/* BUTTON */
+.btn{
+  margin-top:30px;
+  padding:12px 26px;
+  background:#38bdf8;
+  color:#020617;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
 
-iframe{width:90%;height:520px;border:none;border-radius:12px;margin-top:25px}
+/* MODAL (FULL SCREEN VIEWER) */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  z-index:999;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
 
+.modal.active{display:flex}
+
+.modal-content{
+  width:90%;
+  max-width:900px;
+  background:#fff;
+  border-radius:12px;
+  padding:10px;
+}
+
+embed{
+  width:100%;
+  height:80vh;
+  border:none;
+}
+
+/* MOBILE */
 @media(max-width:768px){
   .grid{flex-direction:column;align-items:center}
   .card{width:90%}
   .navbar{flex-wrap:wrap;justify-content:center}
   .navbar h2{width:100%;text-align:center}
-  iframe{height:420px}
+  embed{height:65vh}
 }
 </style>
 </head>
@@ -43,142 +99,90 @@ iframe{width:90%;height:520px;border:none;border-radius:12px;margin-top:25px}
 
 <!-- NAV -->
 <nav class="navbar">
-<h2>Swathi S</h2>
-<button onclick="go('home')">Home</button>
-<button onclick="go('projects')">Projects</button>
-<button onclick="go('certificates')">Certificates</button>
-<button onclick="go('resume')">Resume</button>
+  <h2>Swathi S</h2>
+  <button onclick="go('home')">Home</button>
+  <button onclick="go('projects')">Projects</button>
+  <button onclick="go('certificates')">Certificates</button>
+  <button onclick="go('resume')">Resume</button>
 </nav>
 
 <!-- HOME -->
 <section id="home" class="screen active">
-<h1 style="color:#38bdf8">Swathi Senthil Kumar</h1>
-<p>B.Tech IT (2025) • Software • Cloud • AI/ML • Data Analytics</p>
+  <h1 style="color:#38bdf8">Swathi Senthil Kumar</h1>
+  <p>B.Tech IT (2025) • Software • Cloud • AI/ML • Data Analytics</p>
 
-<div class="grid">
-<div class="card" onclick="go('projects')"><h3>Projects</h3></div>
-<div class="card" onclick="go('certificates')"><h3>Certificates</h3></div>
-<div class="card" onclick="go('resume')"><h3>Resume</h3></div>
-</div>
+  <div class="grid">
+    <div class="card" onclick="go('projects')"><h3>Projects</h3></div>
+    <div class="card" onclick="go('certificates')"><h3>Certificates</h3></div>
+    <div class="card" onclick="go('resume')"><h3>Resume</h3></div>
+  </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="screen">
-<h2>Projects</h2>
-<div class="grid">
-<div class="card" onclick="go('genai')"><h3>Google GenAI Capstone</h3></div>
-<div class="card" onclick="go('chatbot')"><h3>AI Wellness Chatbot</h3></div>
-<div class="card" onclick="go('fraud')"><h3>Fraud Detection</h3></div>
-<div class="card" onclick="go('mern')"><h3>MERN Freelancing</h3></div>
-<div class="card" onclick="go('gan')"><h3>GAN AI</h3></div>
-</div>
-<button class="btn" onclick="go('home')">Back</button>
-</section>
-
-<section id="genai" class="screen">
-<h2>Google GenAI – Personal Health Guardian</h2>
-<a href="https://github.com/Swazk/Personal-Health-Guardian" target="_blank">GitHub</a>
-<button class="btn" onclick="go('projects')">Back</button>
-</section>
-
-<section id="chatbot" class="screen">
-<h2>AI Wellness Chatbot</h2>
-<a href="https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-" target="_blank">GitHub</a>
-<button class="btn" onclick="go('projects')">Back</button>
-</section>
-
-<section id="fraud" class="screen">
-<h2>Fraud Detection Analysis</h2>
-<a href="https://github.com/Swazk/fraud-detection-risk-analysis" target="_blank">GitHub</a>
-<button class="btn" onclick="go('projects')">Back</button>
-</section>
-
-<section id="mern" class="screen">
-<h2>MERN Freelancing Platform</h2>
-<a href="https://github.com/dharshinijayaraj/freelancing_website" target="_blank">GitHub</a>
-<button class="btn" onclick="go('projects')">Back</button>
-</section>
-
-<section id="gan" class="screen">
-<h2>GAN AI Project</h2>
-<a href="https://github.com/Swazk/TNSDC-GAN-AI" target="_blank">GitHub</a>
-<button class="btn" onclick="go('projects')">Back</button>
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card" onclick="window.open('https://github.com/Swazk/Personal-Health-Guardian')"><h3>Google GenAI</h3></div>
+    <div class="card" onclick="window.open('https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-')"><h3>AI Wellness Chatbot</h3></div>
+    <div class="card" onclick="window.open('https://github.com/Swazk/fraud-detection-risk-analysis')"><h3>Fraud Detection</h3></div>
+    <div class="card" onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')"><h3>MERN Freelancing</h3></div>
+    <div class="card" onclick="window.open('https://github.com/Swazk/TNSDC-GAN-AI')"><h3>GAN AI</h3></div>
+  </div>
+  <button class="btn" onclick="go('home')">Back</button>
 </section>
 
 <!-- CERTIFICATES -->
 <section id="certificates" class="screen">
-<h2>Certificates</h2>
-<div class="grid">
-<div class="card" onclick="go('cert-google')"><h3>Google</h3></div>
-<div class="card" onclick="go('cert-tcs')"><h3>TCS</h3></div>
-<div class="card" onclick="go('cert-aws')"><h3>AWS</h3></div>
-<div class="card" onclick="go('cert-oracle')"><h3>Oracle</h3></div>
-<div class="card" onclick="go('cert-cisco')"><h3>Cisco</h3></div>
-<div class="card" onclick="go('cert-deloitte')"><h3>Deloitte</h3></div>
-<div class="card" onclick="go('cert-infosys')"><h3>Infosys</h3></div>
-<div class="card" onclick="go('cert-jpm')"><h3>JPMorgan</h3></div>
-</div>
-<button class="btn" onclick="go('home')">Back</button>
-</section>
+  <h2>Certificates</h2>
 
-<!-- CERTIFICATE PDF VIEWS -->
-<section id="cert-google" class="screen"><iframe src="google-genai.png"></iframe><button class="btn" onclick="go('certificates')">Back</button></section>
+  <div class="grid">
+    <div class="card" onclick="openCert('tcs-1.pdf')"><h3>TCS</h3></div>
+    <div class="card" onclick="openCert('aws-1.pdf')"><h3>AWS</h3></div>
+    <div class="card" onclick="openCert('oracle-1.pdf')"><h3>Oracle</h3></div>
+    <div class="card" onclick="openCert('cisco-1.pdf')"><h3>Cisco</h3></div>
+    <div class="card" onclick="openCert('infosys-1.pdf')"><h3>Infosys</h3></div>
+    <div class="card" onclick="openCert('jpm-1.pdf')"><h3>JPMorgan</h3></div>
+    <div class="card" onclick="openCert('deloitte-1.pdf')"><h3>Deloitte</h3></div>
+  </div>
 
-<section id="cert-tcs" class="screen">
-<iframe src="tcs-1.pdf"></iframe>
-<iframe src="tcs-2.pdf"></iframe>
-<iframe src="tcs-3.pdf"></iframe>
-<button class="btn" onclick="go('certificates')">Back</button>
-</section>
-
-<section id="cert-aws" class="screen">
-<iframe src="aws-1.pdf"></iframe>
-<iframe src="aws-2.pdf"></iframe>
-<button class="btn" onclick="go('certificates')">Back</button>
-</section>
-
-<section id="cert-oracle" class="screen">
-<iframe src="oracle-1.pdf"></iframe>
-<iframe src="oracle-2.pdf"></iframe>
-<iframe src="oracle-3.pdf"></iframe>
-<button class="btn" onclick="go('certificates')">Back</button>
-</section>
-
-<section id="cert-cisco" class="screen">
-<iframe src="cisco-1.pdf"></iframe>
-<iframe src="cisco-2.pdf"></iframe>
-<button class="btn" onclick="go('certificates')">Back</button>
-</section>
-
-<section id="cert-deloitte" class="screen">
-<iframe src="deloitte-1.pdf"></iframe>
-<button class="btn" onclick="go('certificates')">Back</button>
-</section>
-
-<section id="cert-infosys" class="screen">
-<iframe src="infosys-1.pdf"></iframe>
-<button class="btn" onclick="go('certificates')">Back</button>
-</section>
-
-<section id="cert-jpm" class="screen">
-<iframe src="jpm-1.pdf"></iframe>
-<iframe src="jpm-2.pdf"></iframe>
-<button class="btn" onclick="go('certificates')">Back</button>
+  <button class="btn" onclick="go('home')">Back</button>
 </section>
 
 <!-- RESUME -->
 <section id="resume" class="screen">
-<h2>Resume</h2>
-<iframe src="resume.pdf"></iframe>
-<button class="btn" onclick="go('home')">Back</button>
+  <h2>Resume</h2>
+  <embed src="resume.pdf">
+  <br>
+  <a href="resume.pdf" download class="btn">Download Resume</a>
+  <br><br>
+  <button class="btn" onclick="go('home')">Back</button>
 </section>
 
 </div>
 
+<!-- FULL SCREEN CERT MODAL -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <embed id="modalFile">
+    <a id="downloadBtn" class="btn" download>Download</a>
+    <button class="btn" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
 <script>
 function go(id){
-document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
-document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function openCert(file){
+  document.getElementById('modal').classList.add('active');
+  document.getElementById('modalFile').src = file;
+  document.getElementById('downloadBtn').href = file;
+}
+
+function closeModal(){
+  document.getElementById('modal').classList.remove('active');
 }
 </script>
 
