@@ -3,192 +3,212 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Swathi | DevOps & Software Engineer</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Swathi Senthil Kumar | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-  <div class="nav-container">
-    <h2 class="logo">Swathi S</h2>
-
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact" class="nav-btn">Contact</a></li>
-    </ul>
-  </div>
+<nav class="navbar">
+  <h2>Swathi S</h2>
+  <button onclick="goTo('home')">Home</button>
+  <button onclick="goTo('projects')">Projects</button>
+  <button onclick="goTo('certificates')">Certificates</button>
+  <button onclick="goTo('resume')">Resume</button>
 </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-  <h1>Hi, I'm <span>Swathi Senthil Kumar</span></h1>
-  <h3>B.Tech IT Graduate | DevOps • Cloud • Software Engineer</h3>
-  <p>
-    2025 graduate with hands-on experience in software development, DevOps fundamentals, cloud platforms, and AI-driven applications.
+<div id="app">
+
+<!-- HOME -->
+<section class="screen active" id="home">
+  <h1 class="title">Swathi Senthil Kumar</h1>
+  <p class="subtitle">
+    B.Tech Information Technology (2025)<br>
+    Software • Cloud • AI/ML • Data Analytics
   </p>
-  <div class="buttons">
-    <a href="#projects" class="btn">View Projects</a>
-    <a href="Swathi_S_Resume.pdf" class="btn outline" target="_blank">Download Resume</a>
+
+  <p class="desc">
+    B.Tech IT graduate with strong foundations in software development, cloud computing, AI/ML, and data analytics. Hands-on experience through internships and real-world projects.
+  </p>
+
+  <div class="home-actions">
+    <div class="card-3d" onclick="goTo('projects')">Projects</div>
+    <div class="card-3d" onclick="goTo('certificates')">Certificates</div>
+    <div class="card-3d" onclick="goTo('resume')">Resume</div>
   </div>
 </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-  <h2>About Me</h2>
-  <p>
-    I am a B.Tech Information Technology graduate (2025) with experience in designing, building, testing, and deploying software applications. I have worked on full-stack development, cloud platforms (AWS, GCP), CI/CD workflows, and AI-based solutions.
-  </p>
-  <p>
-    I have completed internships in software development and web development, contributed to real-world projects, and built multiple academic and capstone projects involving DevOps, data analytics, and generative AI.
-  </p>
-</section>
+<!-- PROJECTS -->
+<section class="screen" id="projects">
+  <h2>Projects</h2>
 
-  <!-- SKILLS -->
-  <section id="skills">
-  <h2>Skills</h2>
-  <div class="skills-grid">
+  <div class="grid">
 
-    <div class="skill-card">
-      <h3>Programming</h3>
-      <p>Java, Python, JavaScript, C</p>
+    <div class="card-3d" onclick="goTo('proj-genai')">
+      <h3>Google GenAI Capstone</h3>
+      <p>Personal Health Guardian</p>
     </div>
 
-    <div class="skill-card">
-      <h3>Frameworks</h3>
-      <p>Angular, Node.js, React.js, HTML, CSS</p>
+    <div class="card-3d" onclick="goTo('proj-chatbot')">
+      <h3>AI Wellness Chatbot</h3>
+      <p>Final Year Project</p>
     </div>
 
-    <div class="skill-card">
-      <h3>Cloud & DevOps</h3>
-      <p>AWS, Google Cloud (GCP), CI/CD, Jenkins, Git, Linux</p>
+    <div class="card-3d" onclick="goTo('proj-fraud')">
+      <h3>Fraud Detection</h3>
+      <p>Python • SQL • Tableau</p>
     </div>
 
-    <div class="skill-card">
-      <h3>Databases</h3>
-      <p>MySQL, MongoDB, Oracle SQL</p>
+    <div class="card-3d" onclick="goTo('proj-mern')">
+      <h3>MERN Freelancing</h3>
+      <p>Group Project</p>
     </div>
 
-    <div class="skill-card">
-      <h3>AI / Data Tools</h3>
-      <p>TensorFlow, NLP, Tableau</p>
+    <div class="card-3d" onclick="goTo('proj-gan')">
+      <h3>GAN AI Project</h3>
+      <p>TNSDC Program</p>
     </div>
 
   </div>
+
+  <button class="main-btn" onclick="goTo('home')">Back</button>
 </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
+<!-- GOOGLE GENAI -->
+<section class="screen" id="proj-genai">
+  <h2>Google Generative AI Capstone</h2>
 
-    <div class="project-card">
-  <h3>Google Generative AI Capstone Project</h3>
-  <p>
-    Completed a 5-day intensive Generative AI course by Google and built a capstone project applying large language models and responsible AI principles.
-  </p>
-  <p>
-    Earned an official Google Generative AI badge upon successful completion.
-  </p>
-  <p><strong>Tech:</strong> Generative AI, LLMs, Prompt Engineering</p>
-  <a href="https://github.com/Swazk/Personal-Health-Guardian" target="_blank">
-    GitHub Repository
+  <ul class="details">
+    <li>Capstone project under Google Cloud Generative AI program</li>
+    <li>Built <strong>Personal Health Guardian</strong> using GenAI concepts</li>
+    <li>Focused on prompt engineering, LLM usage, and responsible AI</li>
+  </ul>
+
+  <a class="link-btn" href="https://github.com/Swazk/Personal-Health-Guardian" target="_blank">
+    GitHub – Personal Health Guardian
   </a>
-</div>
 
-    <div class="project-card">
-  <h3>AI-Driven Psychological Wellness Chatbot</h3>
-  <p>
-    Built an AI chatbot for sentiment-based mental health detection using NLP techniques and TensorFlow. Implemented preprocessing pipelines and deployed the solution on cloud infrastructure.
-  </p>
-  <p><strong>Tech:</strong> Python, NLP, TensorFlow, Cloud</p>
-  <a href="https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-" target="_blank">
-    GitHub Repository
+  <button class="main-btn" onclick="goTo('projects')">Back</button>
+</section>
+
+<!-- CHATBOT -->
+<section class="screen" id="proj-chatbot">
+  <h2>AI-Driven Psychological Wellness Chatbot</h2>
+
+  <ul class="details">
+    <li>Final year project focused on early-stage depression detection</li>
+    <li>Used NLP, sentiment analysis, and conversational AI</li>
+    <li>Cloud-hosted backend implementation</li>
+  </ul>
+
+  <a class="link-btn"
+     href="https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-"
+     target="_blank">
+     GitHub – Final Year Project
   </a>
-</div>
 
-    <div class="project-card">
-  <h3>Fraud Detection Risk Analysis</h3>
-  <p>
-    Developed an end-to-end ML pipeline including EDA, feature engineering, model scoring, and data visualization dashboards.
-  </p>
-  <p><strong>Tech:</strong> Python, SQL, Tableau</p>
-  <a href="https://github.com/Swazk/Fraud-Detection-Risk-Analysis" target="_blank">
-    GitHub Repository
+  <button class="main-btn" onclick="goTo('projects')">Back</button>
+</section>
+
+<!-- FRAUD -->
+<section class="screen" id="proj-fraud">
+  <h2>Fraud Detection Analysis</h2>
+
+  <ul class="details">
+    <li>Built an end-to-end fraud detection ML pipeline</li>
+    <li>Performed EDA, feature engineering, and model evaluation</li>
+    <li>Created analytics dashboards using Tableau</li>
+  </ul>
+
+  <a class="link-btn"
+     href="https://github.com/Swazk/fraud-detection-risk-analysis"
+     target="_blank">
+     GitHub – Fraud Detection
   </a>
-</div>
 
-    <div class="project-card">
-  <h3>Freelancing Website (MERN Stack) – Group Project</h3>
-  <p>
-    Developed a full-stack freelancing platform that connects clients and freelancers. Implemented user authentication, project posting, and role-based dashboards as part of a collaborative team project.
-  </p>
-  <p>
-    <strong>Tech:</strong> MongoDB, Express.js, React.js, Node.js
-  </p>
-  <p>
-    <strong>My Contribution:</strong> Frontend components, API integration, UI logic, and collaborative development using Git.
-  </p>
-  <a href="https://github.com/dharshinijayaraj/freelancing_website" target="_blank">
-    GitHub Repository
+  <button class="main-btn" onclick="goTo('projects')">Back</button>
+</section>
+
+<!-- MERN -->
+<section class="screen" id="proj-mern">
+  <h2>MERN Freelancing Platform</h2>
+
+  <ul class="details">
+    <li>Group project connecting freelancers and clients</li>
+    <li>Frontend: React.js</li>
+    <li>Backend: Node.js & Express</li>
+    <li>Database: MongoDB</li>
+  </ul>
+
+  <a class="link-btn"
+     href="https://github.com/dharshinijayaraj/freelancing_website"
+     target="_blank">
+     GitHub – MERN Freelancing Platform
   </a>
-</div>
 
-    <div class="project-card">
-  <h3>TransitSphere Navigation System</h3>
-  <p>
-    Implemented route optimization logic using C and SQL with Linux-based command-line interaction and structured data flow.
-  </p>
-  <p><strong>Tech:</strong> C, SQL, Linux</p>
-</div>
-  </section>
+  <button class="main-btn" onclick="goTo('projects')">Back</button>
+</section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
-  <h2>Experience</h2>
+<!-- GAN -->
+<section class="screen" id="proj-gan">
+  <h2>GAN AI Project (TNSDC)</h2>
 
-  <div class="project-card">
-    <h3>Software Development Engineer Intern – MRPL (More Retail)</h3>
-    <p>
-      Designed, built, tested, and deployed backend components using Google Ads API on GCP. Worked on requirement analysis, clean code delivery, CI/CD workflows, and code reviews.
-    </p>
-    <p><strong>Duration:</strong> Mar 2025 – Jun 2025</p>
+  <ul class="details">
+    <li>Worked on GAN-based AI project under TNSDC program</li>
+    <li>Focused on generative models and AI fundamentals</li>
+  </ul>
+
+  <a class="link-btn"
+     href="https://github.com/Swazk/TNSDC-GAN-AI"
+     target="_blank">
+     GitHub – GAN AI Project
+  </a>
+
+  <button class="main-btn" onclick="goTo('projects')">Back</button>
+</section>
+
+<!-- CERTIFICATES -->
+<section class="screen" id="certificates">
+  <h2>Certificates</h2>
+
+  <div class="grid">
+    <div class="card-3d" onclick="goTo('cert-genai')">
+      <h3>Google Generative AI</h3>
+      <p>Capstone Certificate</p>
+    </div>
   </div>
 
-  <div class="project-card">
-    <h3>Web Developer Intern – Egitim Ventures</h3>
-    <p>
-      Developed Angular modules, integrated Node.js APIs, and performed testing, debugging, and UI enhancements based on business requirements.
-    </p>
-    <p><strong>Duration:</strong> Aug 2024 – Sep 2024</p>
-  </div>
+  <button class="main-btn" onclick="goTo('home')">Back</button>
 </section>
 
-  <!-- CERTIFICATION -->
-  <section id="certifications">
-  <h2>Certifications</h2>
-  <p>
-    Google Generative AI • AWS Cloud Practitioner • GCP ML Engineer • Oracle AI & Data Science • Cisco CCNA • TCS ESG • Deloitte & JPMorgan Simulations
+<!-- CERTIFICATE VIEW -->
+<section class="screen" id="cert-genai">
+  <h2>Google Generative AI Certificate</h2>
+
+  <img src="genai-certificate.jpg" class="cert-img" alt="Google GenAI Certificate">
+
+  <p class="desc">
+    Certificate earned as part of Google Cloud Generative AI program covering LLMs, prompt engineering, and responsible AI.
   </p>
+
+  <button class="main-btn" onclick="goTo('certificates')">Back</button>
 </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:swathisenthilkumar017@gmail.com">swathisenthilkumar017@gmail.com</a></p>
-    <p>
-      <a href="https://github.com/Swazk" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/swathi-s-7788b5269/" target="_blank">LinkedIn</a>
-    </p>
-  </section>
-  <footer>
-    <p>© 2025 Swathi Senthil Kumar</p>
-  </footer>
+<!-- RESUME -->
+<section class="screen" id="resume">
+  <h2>Resume</h2>
 
-  <script src="script.js"></script>
+  <a class="link-btn" href="resume.pdf" target="_blank">
+    View / Download Resume
+  </a>
+
+  <button class="main-btn" onclick="goTo('home')">Back</button>
+</section>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
