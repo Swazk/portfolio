@@ -18,6 +18,7 @@
     body {
       background: radial-gradient(circle at top, #0f172a, #020617);
       color: #e5e7eb;
+      min-height: 100vh;
     }
 
     /* NAVBAR */
@@ -26,6 +27,9 @@
       gap: 12px;
       padding: 15px 20px;
       background: #020617;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     .navbar h2 {
@@ -54,6 +58,11 @@
       animation: fade 0.4s ease;
     }
 
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     /* TEXT */
     .title {
       font-size: 2.2rem;
@@ -62,6 +71,7 @@
 
     .subtitle {
       margin-top: 10px;
+      opacity: 0.9;
     }
 
     .desc {
@@ -70,7 +80,7 @@
       line-height: 1.6;
     }
 
-    /* 3D CARDS */
+    /* CARDS */
     .grid {
       display: flex;
       gap: 30px;
@@ -81,9 +91,9 @@
 
     .card {
       width: 240px;
-      height: 140px;
+      min-height: 140px;
       background: linear-gradient(145deg, #020617, #0f172a);
-      border-radius: 18px;
+      border-radius: 16px;
       padding: 20px;
       cursor: pointer;
       box-shadow: 0 20px 40px rgba(0,0,0,0.6);
@@ -96,8 +106,10 @@
 
     .card h3 {
       color: #38bdf8;
+      margin-bottom: 6px;
     }
 
+    /* BUTTONS */
     .btn {
       margin-top: 40px;
       padding: 12px 26px;
@@ -108,15 +120,18 @@
       cursor: pointer;
     }
 
-    @keyframes fade {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    .link {
+      display: inline-block;
+      margin-top: 16px;
+      color: #38bdf8;
+      text-decoration: none;
     }
   </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
   <h2>Swathi S</h2>
   <button data-target="home">Home</button>
@@ -130,6 +145,10 @@
   <h1 class="title">Swathi Senthil Kumar</h1>
   <p class="subtitle">
     B.Tech IT (2025) • Software • Cloud • AI/ML • Data Analytics
+  </p>
+
+  <p class="desc">
+    B.Tech Information Technology graduate with strong foundations in software development, cloud computing, AI/ML, and data analytics.
   </p>
 
   <div class="grid">
@@ -152,13 +171,37 @@
   <div class="grid">
     <div class="card">
       <h3>Google GenAI Capstone</h3>
-      <p>Personal Health Guardian</p>
+      <a class="link" href="https://github.com/Swazk/Personal-Health-Guardian" target="_blank">
+        GitHub →
+      </a>
     </div>
+
     <div class="card">
       <h3>AI Wellness Chatbot</h3>
+      <a class="link" href="https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-" target="_blank">
+        GitHub →
+      </a>
     </div>
+
     <div class="card">
       <h3>Fraud Detection</h3>
+      <a class="link" href="https://github.com/Swazk/fraud-detection-risk-analysis" target="_blank">
+        GitHub →
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>MERN Freelancing</h3>
+      <a class="link" href="https://github.com/dharshinijayaraj/freelancing_website" target="_blank">
+        GitHub →
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>GAN AI (TNSDC)</h3>
+      <a class="link" href="https://github.com/Swazk/TNSDC-GAN-AI" target="_blank">
+        GitHub →
+      </a>
     </div>
   </div>
 
@@ -168,27 +211,40 @@
 <!-- CERTIFICATES -->
 <section class="screen" id="certificates">
   <h2>Certificates</h2>
-  <p>Google Generative AI • AWS • Oracle • Cisco</p>
+
+  <p class="desc">
+    Google Cloud (Generative AI, LLMs) • AWS • Oracle • Cisco (CCNA) • TCS • Deloitte • JPMorgan • Infosys
+  </p>
+
+  <p class="desc">
+    Certificate images can be added later without breaking navigation.
+  </p>
+
   <button class="btn" data-target="home">Back</button>
 </section>
 
 <!-- RESUME -->
 <section class="screen" id="resume">
   <h2>Resume</h2>
-  <p>Download resume.pdf</p>
+
+  <p class="desc">
+    Resume will be uploaded soon.
+  </p>
+
   <button class="btn" data-target="home">Back</button>
 </section>
 
 <script>
-  const buttons = document.querySelectorAll("[data-target]");
-  const screens = document.querySelectorAll(".screen");
+  document.addEventListener("DOMContentLoaded", function () {
+    const triggers = document.querySelectorAll("[data-target]");
+    const screens = document.querySelectorAll(".screen");
 
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const target = btn.getAttribute("data-target");
-
-      screens.forEach(screen => screen.classList.remove("active"));
-      document.getElementById(target).classList.add("active");
+    triggers.forEach(el => {
+      el.addEventListener("click", function () {
+        const id = this.getAttribute("data-target");
+        screens.forEach(s => s.classList.remove("active"));
+        document.getElementById(id).classList.add("active");
+      });
     });
   });
 </script>
