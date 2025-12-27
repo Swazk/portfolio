@@ -8,251 +8,177 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#020617;color:#e5e7eb}
+.app{max-width:1200px;margin:0 auto}
 
-body {
-  background: #020617;
-  color: #e5e7eb;
-}
+.navbar{display:flex;gap:12px;padding:16px}
+.navbar h2{color:#38bdf8;margin-right:auto}
+.navbar button{background:none;border:1px solid #38bdf8;color:#38bdf8;padding:6px 14px;border-radius:20px;cursor:pointer}
 
-/* ===== APP WRAPPER (CRITICAL FIX) ===== */
-.app {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+.screen{display:none;padding:60px 20px;text-align:center}
+.screen.active{display:block}
 
-/* ===== NAVBAR ===== */
-.navbar {
-  display: flex;
-  gap: 12px;
-  padding: 16px;
-}
+.grid{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:40px}
 
-.navbar h2 {
-  color: #38bdf8;
-  margin-right: auto;
-}
+.card{width:260px;background:#0f172a;border-radius:16px;padding:20px;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.6)}
+.card h3{color:#38bdf8}
 
-.navbar button {
-  background: transparent;
-  border: 1px solid #38bdf8;
-  color: #38bdf8;
-  padding: 6px 14px;
-  border-radius: 20px;
-  cursor: pointer;
-}
+.btn{margin-top:40px;padding:12px 26px;background:#38bdf8;color:#020617;border:none;border-radius:8px;cursor:pointer}
 
-/* ===== SCREENS ===== */
-.screen {
-  display: none;
-  padding: 60px 20px;
-  text-align: center;
-}
+iframe{width:90%;height:520px;border:none;border-radius:12px;margin-top:25px}
 
-.screen.active {
-  display: block;
-}
-
-/* ===== TEXT ===== */
-.title {
-  color: #38bdf8;
-  font-size: 2.2rem;
-}
-
-.desc {
-  max-width: 800px;
-  margin: 20px auto;
-  line-height: 1.6;
-}
-
-/* ===== GRID & CARDS ===== */
-.grid {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
-
-.card {
-  width: 260px;
-  min-height: 140px;
-  background: #0f172a;
-  border-radius: 16px;
-  padding: 20px;
-  cursor: pointer;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
-  transition: transform 0.25s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card h3 {
-  color: #38bdf8;
-  margin-bottom: 8px;
-}
-
-/* ===== BUTTONS ===== */
-.btn {
-  margin-top: 40px;
-  padding: 12px 26px;
-  background: #38bdf8;
-  color: #020617;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.link {
-  display: inline-block;
-  margin-top: 14px;
-  color: #38bdf8;
-  text-decoration: none;
-}
-
-/* ===== MOBILE FIX ===== */
-@media (max-width: 768px) {
-  .grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-    max-width: 320px;
-  }
-
-  .navbar {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .navbar h2 {
-    width: 100%;
-    text-align: center;
-  }
-
-  .btn {
-    width: 90%;
-    max-width: 280px;
-  }
+@media(max-width:768px){
+  .grid{flex-direction:column;align-items:center}
+  .card{width:90%}
+  .navbar{flex-wrap:wrap;justify-content:center}
+  .navbar h2{width:100%;text-align:center}
+  iframe{height:420px}
 }
 </style>
 </head>
 
 <body>
-
 <div class="app">
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <nav class="navbar">
-  <h2>Swathi S</h2>
-  <button onclick="go('home')">Home</button>
-  <button onclick="go('projects')">Projects</button>
-  <button onclick="go('certificates')">Certificates</button>
+<h2>Swathi S</h2>
+<button onclick="go('home')">Home</button>
+<button onclick="go('projects')">Projects</button>
+<button onclick="go('certificates')">Certificates</button>
+<button onclick="go('resume')">Resume</button>
 </nav>
 
 <!-- HOME -->
 <section id="home" class="screen active">
-  <h1 class="title">Swathi Senthil Kumar</h1>
-  <p>B.Tech IT (2025) • Software • Cloud • AI/ML • Data Analytics</p>
+<h1 style="color:#38bdf8">Swathi Senthil Kumar</h1>
+<p>B.Tech IT (2025) • Software • Cloud • AI/ML • Data Analytics</p>
 
-  <p class="desc">
-    Information Technology graduate with hands-on experience in AI,
-    cloud computing, and real-world software projects.
-  </p>
-
-  <div class="grid">
-    <div class="card" onclick="go('projects')"><h3>Projects</h3></div>
-    <div class="card" onclick="go('certificates')"><h3>Certificates</h3></div>
-  </div>
+<div class="grid">
+<div class="card" onclick="go('projects')"><h3>Projects</h3></div>
+<div class="card" onclick="go('certificates')"><h3>Certificates</h3></div>
+<div class="card" onclick="go('resume')"><h3>Resume</h3></div>
+</div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="screen">
-  <h2>Projects</h2>
-
-  <div class="grid">
-    <div class="card" onclick="go('genai')"><h3>Google GenAI Capstone</h3></div>
-    <div class="card" onclick="go('chatbot')"><h3>AI Wellness Chatbot</h3></div>
-    <div class="card" onclick="go('fraud')"><h3>Fraud Detection</h3></div>
-    <div class="card" onclick="go('mern')"><h3>MERN Freelancing</h3></div>
-    <div class="card" onclick="go('gan')"><h3>GAN AI (TNSDC)</h3></div>
-  </div>
-
-  <button class="btn" onclick="go('home')">Back</button>
+<h2>Projects</h2>
+<div class="grid">
+<div class="card" onclick="go('genai')"><h3>Google GenAI Capstone</h3></div>
+<div class="card" onclick="go('chatbot')"><h3>AI Wellness Chatbot</h3></div>
+<div class="card" onclick="go('fraud')"><h3>Fraud Detection</h3></div>
+<div class="card" onclick="go('mern')"><h3>MERN Freelancing</h3></div>
+<div class="card" onclick="go('gan')"><h3>GAN AI</h3></div>
+</div>
+<button class="btn" onclick="go('home')">Back</button>
 </section>
 
-<!-- PROJECT DETAILS -->
 <section id="genai" class="screen">
-  <h2>Google GenAI – Personal Health Guardian</h2>
-  <p class="desc">GenAI-based health assistant using LLMs and prompt engineering.</p>
-  <a class="link" href="https://github.com/Swazk/Personal-Health-Guardian" target="_blank">GitHub →</a>
-  <button class="btn" onclick="go('projects')">Back</button>
+<h2>Google GenAI – Personal Health Guardian</h2>
+<a href="https://github.com/Swazk/Personal-Health-Guardian" target="_blank">GitHub</a>
+<button class="btn" onclick="go('projects')">Back</button>
 </section>
 
 <section id="chatbot" class="screen">
-  <h2>AI Wellness Chatbot</h2>
-  <p class="desc">Final year project using NLP for mental wellness.</p>
-  <a class="link" href="https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-" target="_blank">GitHub →</a>
-  <button class="btn" onclick="go('projects')">Back</button>
+<h2>AI Wellness Chatbot</h2>
+<a href="https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-" target="_blank">GitHub</a>
+<button class="btn" onclick="go('projects')">Back</button>
 </section>
 
 <section id="fraud" class="screen">
-  <h2>Fraud Detection Analysis</h2>
-  <p class="desc">ML pipeline with EDA and Tableau dashboards.</p>
-  <a class="link" href="https://github.com/Swazk/fraud-detection-risk-analysis" target="_blank">GitHub →</a>
-  <button class="btn" onclick="go('projects')">Back</button>
+<h2>Fraud Detection Analysis</h2>
+<a href="https://github.com/Swazk/fraud-detection-risk-analysis" target="_blank">GitHub</a>
+<button class="btn" onclick="go('projects')">Back</button>
 </section>
 
 <section id="mern" class="screen">
-  <h2>MERN Freelancing Platform</h2>
-  <p class="desc">Group project using React, Node, Express, MongoDB.</p>
-  <a class="link" href="https://github.com/dharshinijayaraj/freelancing_website" target="_blank">GitHub →</a>
-  <button class="btn" onclick="go('projects')">Back</button>
+<h2>MERN Freelancing Platform</h2>
+<a href="https://github.com/dharshinijayaraj/freelancing_website" target="_blank">GitHub</a>
+<button class="btn" onclick="go('projects')">Back</button>
 </section>
 
 <section id="gan" class="screen">
-  <h2>GAN AI Project (TNSDC)</h2>
-  <p class="desc">Generative AI project under TNSDC program.</p>
-  <a class="link" href="https://github.com/Swazk/TNSDC-GAN-AI" target="_blank">GitHub →</a>
-  <button class="btn" onclick="go('projects')">Back</button>
+<h2>GAN AI Project</h2>
+<a href="https://github.com/Swazk/TNSDC-GAN-AI" target="_blank">GitHub</a>
+<button class="btn" onclick="go('projects')">Back</button>
 </section>
 
 <!-- CERTIFICATES -->
 <section id="certificates" class="screen">
-  <h2>Certificates</h2>
-
-  <div class="grid">
-    <div class="card" onclick="go('cert-google')"><h3>Google GenAI</h3></div>
-    <div class="card" onclick="go('cert-tcs')"><h3>TCS</h3></div>
-    <div class="card" onclick="go('cert-aws')"><h3>AWS</h3></div>
-    <div class="card" onclick="go('cert-oracle')"><h3>Oracle</h3></div>
-    <div class="card" onclick="go('cert-cisco')"><h3>Cisco</h3></div>
-  </div>
-
-  <button class="btn" onclick="go('home')">Back</button>
+<h2>Certificates</h2>
+<div class="grid">
+<div class="card" onclick="go('cert-google')"><h3>Google</h3></div>
+<div class="card" onclick="go('cert-tcs')"><h3>TCS</h3></div>
+<div class="card" onclick="go('cert-aws')"><h3>AWS</h3></div>
+<div class="card" onclick="go('cert-oracle')"><h3>Oracle</h3></div>
+<div class="card" onclick="go('cert-cisco')"><h3>Cisco</h3></div>
+<div class="card" onclick="go('cert-deloitte')"><h3>Deloitte</h3></div>
+<div class="card" onclick="go('cert-infosys')"><h3>Infosys</h3></div>
+<div class="card" onclick="go('cert-jpm')"><h3>JPMorgan</h3></div>
+</div>
+<button class="btn" onclick="go('home')">Back</button>
 </section>
 
-<section id="cert-google" class="screen"><h2>Google Generative AI</h2><button class="btn" onclick="go('certificates')">Back</button></section>
-<section id="cert-tcs" class="screen"><h2>TCS Internship</h2><button class="btn" onclick="go('certificates')">Back</button></section>
-<section id="cert-aws" class="screen"><h2>AWS Cloud</h2><button class="btn" onclick="go('certificates')">Back</button></section>
-<section id="cert-oracle" class="screen"><h2>Oracle AI</h2><button class="btn" onclick="go('certificates')">Back</button></section>
-<section id="cert-cisco" class="screen"><h2>Cisco CCNA</h2><button class="btn" onclick="go('certificates')">Back</button></section>
+<!-- CERTIFICATE PDF VIEWS -->
+<section id="cert-google" class="screen"><iframe src="google-genai.png"></iframe><button class="btn" onclick="go('certificates')">Back</button></section>
+
+<section id="cert-tcs" class="screen">
+<iframe src="tcs-1.pdf"></iframe>
+<iframe src="tcs-2.pdf"></iframe>
+<iframe src="tcs-3.pdf"></iframe>
+<button class="btn" onclick="go('certificates')">Back</button>
+</section>
+
+<section id="cert-aws" class="screen">
+<iframe src="aws-1.pdf"></iframe>
+<iframe src="aws-2.pdf"></iframe>
+<button class="btn" onclick="go('certificates')">Back</button>
+</section>
+
+<section id="cert-oracle" class="screen">
+<iframe src="oracle-1.pdf"></iframe>
+<iframe src="oracle-2.pdf"></iframe>
+<iframe src="oracle-3.pdf"></iframe>
+<button class="btn" onclick="go('certificates')">Back</button>
+</section>
+
+<section id="cert-cisco" class="screen">
+<iframe src="cisco-1.pdf"></iframe>
+<iframe src="cisco-2.pdf"></iframe>
+<button class="btn" onclick="go('certificates')">Back</button>
+</section>
+
+<section id="cert-deloitte" class="screen">
+<iframe src="deloitte-1.pdf"></iframe>
+<button class="btn" onclick="go('certificates')">Back</button>
+</section>
+
+<section id="cert-infosys" class="screen">
+<iframe src="infosys-1.pdf"></iframe>
+<button class="btn" onclick="go('certificates')">Back</button>
+</section>
+
+<section id="cert-jpm" class="screen">
+<iframe src="jpm-1.pdf"></iframe>
+<iframe src="jpm-2.pdf"></iframe>
+<button class="btn" onclick="go('certificates')">Back</button>
+</section>
+
+<!-- RESUME -->
+<section id="resume" class="screen">
+<h2>Resume</h2>
+<iframe src="resume.pdf"></iframe>
+<button class="btn" onclick="go('home')">Back</button>
+</section>
 
 </div>
 
 <script>
-function go(id) {
-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
+function go(id){
+document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
 }
 </script>
 
