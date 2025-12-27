@@ -5,38 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Swathi Senthil Kumar | Portfolio</title>
 
-  <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      color: #e5e7eb;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      gap: 12px;
+      padding: 15px 20px;
+      background: #020617;
+    }
+
+    .navbar h2 {
+      color: #38bdf8;
+      margin-right: auto;
+    }
+
+    .navbar button {
+      background: transparent;
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    /* SCREENS */
+    .screen {
+      display: none;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .screen.active {
+      display: block;
+      animation: fade 0.4s ease;
+    }
+
+    /* TEXT */
+    .title {
+      font-size: 2.2rem;
+      color: #38bdf8;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+    }
+
+    .desc {
+      max-width: 720px;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+
+    /* 3D CARDS */
+    .grid {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .card {
+      width: 240px;
+      height: 140px;
+      background: linear-gradient(145deg, #020617, #0f172a);
+      border-radius: 18px;
+      padding: 20px;
+      cursor: pointer;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      color: #38bdf8;
+    }
+
+    .btn {
+      margin-top: 40px;
+      padding: 12px 26px;
+      background: #38bdf8;
+      color: #020617;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 
 <body>
 
 <nav class="navbar">
   <h2>Swathi S</h2>
-  <button onclick="goTo('home')">Home</button>
-  <button onclick="goTo('projects')">Projects</button>
-  <button onclick="goTo('certificates')">Certificates</button>
-  <button onclick="goTo('resume')">Resume</button>
+  <button data-target="home">Home</button>
+  <button data-target="projects">Projects</button>
+  <button data-target="certificates">Certificates</button>
+  <button data-target="resume">Resume</button>
 </nav>
-
-<div id="app">
 
 <!-- HOME -->
 <section class="screen active" id="home">
   <h1 class="title">Swathi Senthil Kumar</h1>
   <p class="subtitle">
-    B.Tech Information Technology (2025)<br>
-    Software • Cloud • AI/ML • Data Analytics
+    B.Tech IT (2025) • Software • Cloud • AI/ML • Data Analytics
   </p>
 
-  <p class="desc">
-    B.Tech IT graduate with strong foundations in software development, cloud computing, AI/ML, and data analytics. Hands-on experience through internships and real-world projects.
-  </p>
-
-  <div class="home-actions">
-    <div class="card-3d" onclick="goTo('projects')">Projects</div>
-    <div class="card-3d" onclick="goTo('certificates')">Certificates</div>
-    <div class="card-3d" onclick="goTo('resume')">Resume</div>
+  <div class="grid">
+    <div class="card" data-target="projects">
+      <h3>Projects</h3>
+    </div>
+    <div class="card" data-target="certificates">
+      <h3>Certificates</h3>
+    </div>
+    <div class="card" data-target="resume">
+      <h3>Resume</h3>
+    </div>
   </div>
 </section>
 
@@ -45,170 +150,48 @@
   <h2>Projects</h2>
 
   <div class="grid">
-
-    <div class="card-3d" onclick="goTo('proj-genai')">
+    <div class="card">
       <h3>Google GenAI Capstone</h3>
       <p>Personal Health Guardian</p>
     </div>
-
-    <div class="card-3d" onclick="goTo('proj-chatbot')">
+    <div class="card">
       <h3>AI Wellness Chatbot</h3>
-      <p>Final Year Project</p>
     </div>
-
-    <div class="card-3d" onclick="goTo('proj-fraud')">
+    <div class="card">
       <h3>Fraud Detection</h3>
-      <p>Python • SQL • Tableau</p>
     </div>
-
-    <div class="card-3d" onclick="goTo('proj-mern')">
-      <h3>MERN Freelancing</h3>
-      <p>Group Project</p>
-    </div>
-
-    <div class="card-3d" onclick="goTo('proj-gan')">
-      <h3>GAN AI Project</h3>
-      <p>TNSDC Program</p>
-    </div>
-
   </div>
 
-  <button class="main-btn" onclick="goTo('home')">Back</button>
-</section>
-
-<!-- GOOGLE GENAI -->
-<section class="screen" id="proj-genai">
-  <h2>Google Generative AI Capstone</h2>
-
-  <ul class="details">
-    <li>Capstone project under Google Cloud Generative AI program</li>
-    <li>Built <strong>Personal Health Guardian</strong> using GenAI concepts</li>
-    <li>Focused on prompt engineering, LLM usage, and responsible AI</li>
-  </ul>
-
-  <a class="link-btn" href="https://github.com/Swazk/Personal-Health-Guardian" target="_blank">
-    GitHub – Personal Health Guardian
-  </a>
-
-  <button class="main-btn" onclick="goTo('projects')">Back</button>
-</section>
-
-<!-- CHATBOT -->
-<section class="screen" id="proj-chatbot">
-  <h2>AI-Driven Psychological Wellness Chatbot</h2>
-
-  <ul class="details">
-    <li>Final year project focused on early-stage depression detection</li>
-    <li>Used NLP, sentiment analysis, and conversational AI</li>
-    <li>Cloud-hosted backend implementation</li>
-  </ul>
-
-  <a class="link-btn"
-     href="https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-"
-     target="_blank">
-     GitHub – Final Year Project
-  </a>
-
-  <button class="main-btn" onclick="goTo('projects')">Back</button>
-</section>
-
-<!-- FRAUD -->
-<section class="screen" id="proj-fraud">
-  <h2>Fraud Detection Analysis</h2>
-
-  <ul class="details">
-    <li>Built an end-to-end fraud detection ML pipeline</li>
-    <li>Performed EDA, feature engineering, and model evaluation</li>
-    <li>Created analytics dashboards using Tableau</li>
-  </ul>
-
-  <a class="link-btn"
-     href="https://github.com/Swazk/fraud-detection-risk-analysis"
-     target="_blank">
-     GitHub – Fraud Detection
-  </a>
-
-  <button class="main-btn" onclick="goTo('projects')">Back</button>
-</section>
-
-<!-- MERN -->
-<section class="screen" id="proj-mern">
-  <h2>MERN Freelancing Platform</h2>
-
-  <ul class="details">
-    <li>Group project connecting freelancers and clients</li>
-    <li>Frontend: React.js</li>
-    <li>Backend: Node.js & Express</li>
-    <li>Database: MongoDB</li>
-  </ul>
-
-  <a class="link-btn"
-     href="https://github.com/dharshinijayaraj/freelancing_website"
-     target="_blank">
-     GitHub – MERN Freelancing Platform
-  </a>
-
-  <button class="main-btn" onclick="goTo('projects')">Back</button>
-</section>
-
-<!-- GAN -->
-<section class="screen" id="proj-gan">
-  <h2>GAN AI Project (TNSDC)</h2>
-
-  <ul class="details">
-    <li>Worked on GAN-based AI project under TNSDC program</li>
-    <li>Focused on generative models and AI fundamentals</li>
-  </ul>
-
-  <a class="link-btn"
-     href="https://github.com/Swazk/TNSDC-GAN-AI"
-     target="_blank">
-     GitHub – GAN AI Project
-  </a>
-
-  <button class="main-btn" onclick="goTo('projects')">Back</button>
+  <button class="btn" data-target="home">Back</button>
 </section>
 
 <!-- CERTIFICATES -->
 <section class="screen" id="certificates">
   <h2>Certificates</h2>
-
-  <div class="grid">
-    <div class="card-3d" onclick="goTo('cert-genai')">
-      <h3>Google Generative AI</h3>
-      <p>Capstone Certificate</p>
-    </div>
-  </div>
-
-  <button class="main-btn" onclick="goTo('home')">Back</button>
-</section>
-
-<!-- CERTIFICATE VIEW -->
-<section class="screen" id="cert-genai">
-  <h2>Google Generative AI Certificate</h2>
-
-  <img src="genai-certificate.jpg" class="cert-img" alt="Google GenAI Certificate">
-
-  <p class="desc">
-    Certificate earned as part of Google Cloud Generative AI program covering LLMs, prompt engineering, and responsible AI.
-  </p>
-
-  <button class="main-btn" onclick="goTo('certificates')">Back</button>
+  <p>Google Generative AI • AWS • Oracle • Cisco</p>
+  <button class="btn" data-target="home">Back</button>
 </section>
 
 <!-- RESUME -->
 <section class="screen" id="resume">
   <h2>Resume</h2>
-
-  <a class="link-btn" href="resume.pdf" target="_blank">
-    View / Download Resume
-  </a>
-
-  <button class="main-btn" onclick="goTo('home')">Back</button>
+  <p>Download resume.pdf</p>
+  <button class="btn" data-target="home">Back</button>
 </section>
 
-</div>
+<script>
+  const buttons = document.querySelectorAll("[data-target]");
+  const screens = document.querySelectorAll(".screen");
 
-<script src="script.js?v=2"></script>
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const target = btn.getAttribute("data-target");
+
+      screens.forEach(screen => screen.classList.remove("active"));
+      document.getElementById(target).classList.add("active");
+    });
+  });
+</script>
+
 </body>
 </html>
