@@ -17,6 +17,15 @@ body{background:#020617;color:#e5e7eb}
   color:#38bdf8;
 }
 
+p{
+  line-height:1.8;
+  font-size:1rem;
+}
+
+h1,h2{
+  letter-spacing:0.5px;
+}
+
 /* NAV */
 .navbar{
   display:flex;
@@ -34,9 +43,29 @@ body{background:#020617;color:#e5e7eb}
   cursor:pointer;
 }
 
+.navbar button{
+  transition:background 0.3s ease, color 0.3s ease;
+}
+
+.navbar button:hover{
+  background:#38bdf8;
+  color:#020617;
+}
+
 /* SCREENS */
-.screen{display:none;padding:60px 20px}
-.screen.active{display:block}
+.screen{
+  display:none;
+  padding:60px 20px;
+  opacity:0;
+  transform:translateY(10px);
+  transition:opacity 0.4s ease, transform 0.4s ease;
+}
+
+.screen.active{
+  display:block;
+  opacity:1;
+  transform:translateY(0);
+}
 
 /* GRID + CARD */
 .grid{
@@ -55,6 +84,21 @@ body{background:#020617;color:#e5e7eb}
   cursor:pointer;
   box-shadow:0 12px 30px rgba(0,0,0,.6);
   transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.card{
+  animation:cardIn 0.5s ease forwards;
+}
+
+@keyframes cardIn{
+  from{
+    opacity:0;
+    transform:translateY(15px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 @media (hover:hover){
@@ -93,6 +137,15 @@ embed{width:100%;height:80vh;border:none}
   .grid{flex-direction:column;align-items:center}
   .card{width:90%}
   embed{height:65vh}
+}
+
+#home h1{
+  font-size:2.4rem;
+}
+
+#home p{
+  max-width:900px;
+  margin:10px auto;
 }
 </style>
 </head>
