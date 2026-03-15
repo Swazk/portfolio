@@ -33,7 +33,7 @@ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.c
 
 <div>
 
-<button onclick="go('home')">Home</button> <button onclick="go('projects')">Projects</button> <button onclick="go('skills')">Tech</button> <button onclick="go('github')">GitHub</button> <button onclick="go('certificates')">Certificates</button> <button onclick="go('resume')">Resume</button> <button onclick="go('contact')">Contact</button>
+<button onclick="go('home')">Home</button> <button onclick="go('projects')">Projects</button> <button onclick="go('techsphere')">Tech Sphere</button> <button onclick="go('github')">GitHub</button> <button onclick="go('certificates')">Certificates</button> <button onclick="go('resume')">Resume</button> <button onclick="go('contact')">Contact</button>
 
 </div>
 
@@ -46,58 +46,13 @@ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.c
 <h1>Swathi Senthil Kumar</h1>
 
 <p>Software Developer | AI | Cloud | MERN</p>
-<p>B.Tech IT graduate (2025) with strong foundations in software development, cloud computing, AI/ML, and data analytics. 
+<p>B.Tech IT graduate (2025) with strong foundations in software development, cloud computing, AI/ML, and data analytics.
   Skilled in C, Java, Python, JavaScript, SQL, and modern web frameworks. Certified across Google Cloud, AWS, Oracle University, Cisco (CCNA), TCS, Deloitte, and JPMorgan, demonstrating adaptability to software, cloud, data, and cybersecurity environments.
-  Passionate about building efficient, scalable solutions and contributing to real-world engineering projects</p>
+  Passionate about building efficient, scalable solutions and contributing to real-world engineering projects.</p>
 
 <button onclick="go('projects')" class="mainBtn">
 Explore My Work
 </button>
-
-</section>
-
-<section id="skills" class="screen">
-
-<h2>Tech Stack</h2>
-
-<div class="tech-stack">
-
-<div class="tech">
-<i class="devicon-python-plain"></i>
-<span>Python</span>
-</div>
-
-<div class="tech">
-<i class="devicon-java-plain"></i>
-<span>Java</span>
-</div>
-
-<div class="tech">
-<i class="devicon-javascript-plain"></i>
-<span>JavaScript</span>
-</div>
-
-<div class="tech">
-<i class="devicon-react-original"></i>
-<span>React</span>
-</div>
-
-<div class="tech">
-<i class="devicon-nodejs-plain"></i>
-<span>Node</span>
-</div>
-
-<div class="tech">
-<i class="devicon-mongodb-plain"></i>
-<span>MongoDB</span>
-</div>
-
-<div class="tech">
-<i class="devicon-amazonwebservices-original"></i>
-<span>AWS</span>
-</div>
-
-</div>
 
 </section>
 
@@ -108,33 +63,53 @@ Explore My Work
 <div class="grid">
 
 <div class="card"
+onclick="window.open('https://github.com/Swazk/Personal-Health-Guardian')">
+
+<h3>Google Gen-AI Personal Health Guardian</h3>
+<p>AI healthcare assistant built using Google Generative AI.</p>
+<p>Developed a health monitoring web application for tracking user wellness metrics.
+  Implemented data analysis features to generate personalized health insights.</p>
+</div>
+
+<div class="card"
 onclick="window.open('https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-')">
 
-<h3>AI Psychological Chatbot</h3>
-
+<h3>AI-Driven Psychological Wellness Chatbot (Gluck Bot)</h3>
+<p>Developed an AI chatbot for early-stage depression detection using sentiment analysis and conversational modeling.
+  Implemented NLP pipelines, intent classification, and cloud-hosted backend.</p>
 </div>
 
 <div class="card"
 onclick="window.open('https://github.com/Swazk/fraud-detection-risk-analysis')">
 
 <h3>Fraud Detection System</h3>
-
+<p>Built a machine learning and data analysis pipeline for detecting potential fraudulent transactions.
+  Performed data preprocessing, feature engineering, and model evaluation.</p>
 </div>
 
 <div class="card"
 onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')">
 
-<h3>MERN Freelancing Website</h3>
-
+<h3>MERN Freelancing Platform</h3>
+<p>Creating a MERN stack (MongoDB, Express.js, React, Node.js) freelancing platform aims to bridge the gap between clients and service providers by offering a highly interactive, real-time and scalable marketplace.
+  This technology stack is chosen for its ability to handle dynamic data-driven applications, allowing for seamless communication, secure transactions and personalized user experiences.</p>
 </div>
 
 </div>
 
 </section>
 
+<section id="techsphere" class="screen">
+
+<h2>3D Tech Sphere</h2>
+
+<canvas id="sphere"></canvas>
+
+</section>
+
 <section id="github" class="screen">
 
-<h2>GitHub Contributions</h2>
+<h2>GitHub Activity</h2>
 
 <div class="calendar"></div>
 
@@ -146,10 +121,28 @@ onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')"
 
 <div class="grid">
 
-<div class="card" onclick="openCert('aws-1.pdf')">AWS</div>
-<div class="card" onclick="openCert('cisco-1.pdf')">Cisco</div>
-<div class="card" onclick="openCert('oracle-1.pdf')">Oracle</div>
-<div class="card" onclick="openCert('tcs-1.pdf')">TCS</div>
+<div class="card" onclick="openCert('aws-1.pdf')">AWS 1</div>
+<div class="card" onclick="openCert('aws-2.pdf')">AWS 2</div>
+
+<div class="card" onclick="openCert('cisco-1.pdf')">Cisco 1</div>
+<div class="card" onclick="openCert('cisco-2.pdf')">Cisco 2</div>
+
+<div class="card" onclick="openCert('deloitte-1.pdf')">Deloitte 1</div>
+<div class="card" onclick="openCert('deloitte-2.pdf')">Deloitte 2</div>
+<div class="card" onclick="openCert('deloitte-3.pdf')">Deloitte 3</div>
+
+<div class="card" onclick="openCert('infosys-1.pdf')">Infosys</div>
+
+<div class="card" onclick="openCert('jpm-1.pdf')">JPMorgan 1</div>
+<div class="card" onclick="openCert('jpm-2.pdf')">JPMorgan 2</div>
+
+<div class="card" onclick="openCert('oracle-1.pdf')">Oracle 1</div>
+<div class="card" onclick="openCert('oracle-2.pdf')">Oracle 2</div>
+<div class="card" onclick="openCert('oracle-3.pdf')">Oracle 3</div>
+
+<div class="card" onclick="openCert('tcs-1.pdf')">TCS 1</div>
+<div class="card" onclick="openCert('tcs-2.pdf')">TCS 2</div>
+<div class="card" onclick="openCert('tcs-3.pdf')">TCS 3</div>
 
 </div>
 
@@ -165,7 +158,7 @@ onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')"
 
 <section id="contact" class="screen">
 
-<h2>For work related, contact me on</h2>
+<h2>Contact</h2>
 
 <div class="contact-icons">
 
@@ -195,16 +188,15 @@ onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')"
 
 <div id="chatWindow">
 
-<div id="chatHeader">AI Portfolio Assistant</div>
+<div id="chatHeader">Portfolio Assistant</div>
 
 <div id="chatMessages"></div>
 
-<input id="chatInput" placeholder="Ask anything about Swathi">
+<input id="chatInput" placeholder="Ask about Swathi">
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
