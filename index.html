@@ -1,25 +1,13 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Swathi's Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet"
-href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-
-<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
-
-<link rel="stylesheet"
-href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
 
 </head>
 
@@ -29,32 +17,35 @@ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.c
 
 <nav class="navbar">
 
-<h2>Swathi S</h2>
-
-<div>
-
-<button onclick="go('home')">Home</button> <button onclick="go('projects')">Projects</button> <button onclick="go('timeline')">Education & Experience</button> <button onclick="go('techsphere')">Tech Sphere</button> <button onclick="go('github')">GitHub</button> <button onclick="go('certificates')">Certificates</button> <button onclick="go('resume')">Resume</button> <button onclick="go('contact')">Contact</button>
-
-</div>
+<button onclick="go('home')">Home</button>
+<button onclick="go('projects')">Projects</button>
+<button onclick="go('timeline')">Education & Experience</button>
+<button onclick="go('techsphere')">Tech Stack</button>
+<button onclick="go('github')">GitHub Stats</button>
+<button onclick="go('certificates')">Certifications</button>
+<button onclick="go('resume')">Resume</button>
+<button onclick="go('contact')">Contact</button>
 
 </nav>
 
-<div class="app">
 
 <section id="home" class="screen active">
 
-<h1>Swathi Senthil Kumar</h1>
+<h1>Swathi S</h1>
 
-<p>Software Developer | AI | Cloud | MERN</p>
+<p>Software Engineer | Cloud | DevOps | AI</p>
 <p>B.Tech IT graduate (2025) with strong foundations in software development, cloud computing, AI/ML, and data analytics.
   Skilled in C, Java, Python, JavaScript, SQL, and modern web frameworks. Certified across Google Cloud, AWS, Oracle University, Cisco (CCNA), TCS, Deloitte, and JPMorgan, demonstrating adaptability to software, cloud, data, and cybersecurity environments.
   Passionate about building efficient, scalable solutions and contributing to real-world engineering projects.</p>
 
-<button onclick="go('projects')" class="mainBtn">
-Explore My Work
-</button>
+<div class="github">
+
+<img src="https://github-readme-stats.vercel.app/api?username=Swazk&show_icons=true&theme=tokyonight">
+
+</div>
 
 </section>
+
 
 <section id="projects" class="screen">
 
@@ -62,42 +53,35 @@ Explore My Work
 
 <div class="grid">
 
-<div class="card"
-onclick="window.open('https://github.com/Swazk/Personal-Health-Guardian')">
-
-<h3>Google Gen-AI Personal Health Guardian</h3>
-<p>AI healthcare assistant built using Google Generative AI.</p>
-<p>Developed a health monitoring web application for tracking user wellness metrics.
-  Implemented data analysis features to generate personalized health insights.</p>
-</div>
-
-<div class="card"
-onclick="window.open('https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-')">
-
+<div class="card" onclick="window.open('https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-')">
 <h3>AI-Driven Psychological Wellness Chatbot (Gluck Bot)</h3>
 <p>Developed an AI chatbot for early-stage depression detection using sentiment analysis and conversational modeling.
   Implemented NLP pipelines, intent classification, and cloud-hosted backend.</p>
 </div>
 
-<div class="card"
-onclick="window.open('https://github.com/Swazk/fraud-detection-risk-analysis')">
-
-<h3>Fraud Detection System</h3>
-<p>Built a machine learning and data analysis pipeline for detecting potential fraudulent transactions.
-  Performed data preprocessing, feature engineering, and model evaluation.</p>
-</div>
-
-<div class="card"
-onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')">
-
+<div class="card" onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')">
 <h3>MERN Freelancing Platform</h3>
 <p>Creating a MERN stack (MongoDB, Express.js, React, Node.js) freelancing platform aims to bridge the gap between clients and service providers by offering a highly interactive, real-time and scalable marketplace.
   This technology stack is chosen for its ability to handle dynamic data-driven applications, allowing for seamless communication, secure transactions and personalized user experiences.</p>
 </div>
 
+<div class="card" onclick="window.open('https://github.com/Swazk/fraud-detection-risk-analysis')">
+<h3>Fraud Detection System</h3>
+<p>Built a machine learning and data analysis pipeline for detecting potential fraudulent transactions.
+  Performed data preprocessing, feature engineering, and model evaluation.</p>
+</div>
+
+<div class="card" onclick="window.open('https://github.com/Swazk/Personal-Health-Guardian')">
+<h3>Google Gen-AI Capstone</h3>
+<p>AI healthcare assistant built using Google Generative AI.</p>
+<p>Developed a health monitoring web application for tracking user wellness metrics.
+  Implemented data analysis features to generate personalized health insights.</p>
+</div>
+
 </div>
 
 </section>
+
 
 <section id="timeline" class="screen">
 
@@ -176,6 +160,7 @@ onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')"
 
 </section>
 
+
 <section id="techsphere" class="screen">
 
 <h2>Tech Stack</h2>
@@ -236,9 +221,17 @@ onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')"
 
 </section>
 
+<section id="github" class="screen">
+
+<h2>GitHub Stats</h2>
+
+<div class="calendar"></div>
+
+</section>
+
 <section id="certificates" class="screen">
 
-<h2>Certificates</h2>
+<h2>Certifications</h2>
 
 <div class="grid">
 
@@ -277,11 +270,10 @@ onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')"
 
 </section>
 
+
 <section id="contact" class="screen">
 
-<h2>Contact</h2>
-
-<div class="contact-icons">
+<h2>For work related,</h2>
 
 <a href="https://github.com/Swazk" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png">
