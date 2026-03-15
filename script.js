@@ -98,4 +98,5 @@ document.getElementById("chatMessages").innerHTML+=
 input.value=""
 
 }
+  
 })
