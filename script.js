@@ -124,3 +124,10 @@ renderer.render(scene,camera)
 }
 
 animate()
+
+
+GitHubCalendar(".calendar", "Swazk", {
+
+responsive: true
+
+});
