@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Swathi Senthil Kumar | Portfolio</title>
+<title>Swathi's Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -30,9 +31,9 @@ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.c
 
 <h2>Swathi S</h2>
 
-<div class="nav-links">
+<div>
 
-<button onclick="go('home')">Home</button> <button onclick="go('projects')">Projects</button> <button onclick="go('skills')">Skills</button> <button onclick="go('devops')">DevOps</button> <button onclick="go('github')">GitHub</button> <button onclick="go('certificates')">Certificates</button> <button onclick="go('resume')">Resume</button> <button onclick="go('contact')">Contact</button>
+<button onclick="go('home')">Home</button> <button onclick="go('projects')">Projects</button> <button onclick="go('skills')">Tech</button> <button onclick="go('github')">GitHub</button> <button onclick="go('certificates')">Certificates</button> <button onclick="go('resume')">Resume</button> <button onclick="go('contact')">Contact</button>
 
 </div>
 
@@ -44,9 +45,12 @@ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.c
 
 <h1>Swathi Senthil Kumar</h1>
 
-<p>Software Developer | AI | Cloud</p>
+<p>Software Developer | AI | Cloud | MERN</p>
+<p>B.Tech IT graduate (2025) with strong foundations in software development, cloud computing, AI/ML, and data analytics. 
+  Skilled in C, Java, Python, JavaScript, SQL, and modern web frameworks. Certified across Google Cloud, AWS, Oracle University, Cisco (CCNA), TCS, Deloitte, and JPMorgan, demonstrating adaptability to software, cloud, data, and cybersecurity environments.
+  Passionate about building efficient, scalable solutions and contributing to real-world engineering projects</p>
 
-<button class="mainBtn" onclick="go('projects')">
+<button onclick="go('projects')" class="mainBtn">
 Explore My Work
 </button>
 
@@ -93,11 +97,6 @@ Explore My Work
 <span>AWS</span>
 </div>
 
-<div class="tech">
-<i class="devicon-googlecloud-plain"></i>
-<span>GCP</span>
-</div>
-
 </div>
 
 </section>
@@ -109,18 +108,9 @@ Explore My Work
 <div class="grid">
 
 <div class="card"
-onclick="window.open('https://github.com/Swazk/Personal-Health-Guardian')">
-
-<h3>Google GenAI Personal Health Guardian</h3>
-<p>AI healthcare assistant</p>
-
-</div>
-
-<div class="card"
 onclick="window.open('https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-')">
 
 <h3>AI Psychological Chatbot</h3>
-<p>Mental health detection chatbot</p>
 
 </div>
 
@@ -128,32 +118,15 @@ onclick="window.open('https://github.com/Swazk/AI---driven-psychological-wellnes
 onclick="window.open('https://github.com/Swazk/fraud-detection-risk-analysis')">
 
 <h3>Fraud Detection System</h3>
-<p>Data science risk analysis</p>
 
 </div>
 
 <div class="card"
 onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')">
 
-<h3>MERN Freelancing Platform</h3>
-<p>Full stack marketplace</p>
+<h3>MERN Freelancing Website</h3>
 
 </div>
-
-</div>
-
-</section>
-
-<section id="devops" class="screen">
-
-<h2>DevOps Visualization</h2>
-
-<div class="grid">
-
-<div class="card">Docker Containers</div>
-<div class="card">CI/CD Pipeline</div>
-<div class="card">Kubernetes Deployment</div>
-<div class="card">AWS Hosting</div>
 
 </div>
 
@@ -161,7 +134,7 @@ onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')"
 
 <section id="github" class="screen">
 
-<h2>GitHub Activity</h2>
+<h2>GitHub Contributions</h2>
 
 <div class="calendar"></div>
 
@@ -177,8 +150,6 @@ onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')"
 <div class="card" onclick="openCert('cisco-1.pdf')">Cisco</div>
 <div class="card" onclick="openCert('oracle-1.pdf')">Oracle</div>
 <div class="card" onclick="openCert('tcs-1.pdf')">TCS</div>
-<div class="card" onclick="openCert('jpm-1.pdf')">JPMorgan</div>
-<div class="card" onclick="openCert('deloitte-1.pdf')">Deloitte</div>
 
 </div>
 
@@ -188,13 +159,13 @@ onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')"
 
 <h2>Resume</h2>
 
-<embed src="resume.pdf" width="80%" height="600px">
+<embed src="resume.pdf" width="80%" height="600">
 
 </section>
 
 <section id="contact" class="screen">
 
-<h2>To Contact Me</h2>
+<h2>For work related, contact me on</h2>
 
 <div class="contact-icons">
 
@@ -218,19 +189,22 @@ onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')"
 
 </section>
 
-<div id="chatIcon">💬</div>
+</div>
+
+<div id="chatIcon">🤖</div>
 
 <div id="chatWindow">
 
-<div id="chatHeader">Portfolio Assistant</div>
+<div id="chatHeader">AI Portfolio Assistant</div>
 
 <div id="chatMessages"></div>
 
-<input id="chatInput" placeholder="Ask about Swathi">
+<input id="chatInput" placeholder="Ask anything about Swathi">
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
