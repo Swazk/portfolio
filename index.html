@@ -1,362 +1,194 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Swathi Senthil Kumar | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#020617;color:#e5e7eb}
-.app{max-width:1200px;margin:0 auto}
-.card i{
-  font-size:2.4rem;
-  color:#38bdf8;
-}
+<title>Swathi S | Portfolio</title>
 
-p{
-  line-height:1.8;
-  font-size:1rem;
-}
+<link rel="stylesheet" href="style.css">
 
-h1,h2{
-  letter-spacing:0.5px;
-}
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-/* NAV */
-.navbar{
-  display:flex;
-  gap:12px;
-  padding:16px;
-  align-items:center;
-}
-.navbar h2{color:#38bdf8;margin-right:auto}
-.navbar button{
-  background:none;
-  border:1px solid #38bdf8;
-  color:#38bdf8;
-  padding:6px 14px;
-  border-radius:20px;
-  cursor:pointer;
-}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 
-.navbar button{
-  transition:background 0.3s ease, color 0.3s ease;
-}
+<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
 
-.navbar button:hover{
-  background:#38bdf8;
-  color:#020617;
-}
+<link rel="stylesheet"
+href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
 
-/* SCREENS */
-.screen{
-  display:none;
-  padding:60px 20px;
-  opacity:0;
-  transform:translateY(10px);
-  transition:opacity 0.4s ease, transform 0.4s ease;
-}
-
-.screen.active{
-  display:block;
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* GRID + CARD */
-.grid{
-  display:flex;
-  gap:30px;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin-top:40px;
-}
-
-.card{
-  width:280px;
-  background:#0f172a;
-  border-radius:16px;
-  padding:22px;
-  cursor:pointer;
-  box-shadow:0 12px 30px rgba(0,0,0,.6);
-  transition:transform .3s ease, box-shadow .3s ease;
-}
-
-.card{
-  animation:cardIn 0.5s ease forwards;
-}
-
-@keyframes cardIn{
-  from{
-    opacity:0;
-    transform:translateY(15px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-@media (hover:hover){
-  .card:hover{
-    transform:translateY(-10px) rotateX(8deg);
-    box-shadow:0 25px 50px rgba(0,0,0,.8);
-  }
-}
-
-.card h3{color:#38bdf8;margin-bottom:10px}
-.card p{font-size:.95rem;line-height:1.5}
-
-/* MODAL */
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.85);
-  z-index:999;
-  justify-content:center;
-  align-items:center;
-  padding:20px;
-}
-.modal.active{display:flex}
-.modal-content{
-  width:90%;
-  max-width:900px;
-  background:#fff;
-  border-radius:12px;
-  padding:10px;
-}
-embed{width:100%;height:80vh;border:none}
-
-/* MOBILE */
-@media(max-width:768px){
-  .grid{flex-direction:column;align-items:center}
-  .card{width:90%}
-  embed{height:65vh}
-}
-
-#home h1{
-  font-size:2.4rem;
-}
-
-#home p{
-  max-width:900px;
-  margin:10px auto;
-}
-</style>
 </head>
 
 <body>
-<div class="app">
 
-<!-- NAV -->
+<canvas id="galaxy"></canvas>
+
 <nav class="navbar">
-  <h2>Swathi S</h2>
-  <button onclick="go('home')">Home</button>
-  <button onclick="go('projects')">Projects</button>
-  <button onclick="go('certificates')">Certificates</button>
-  <button onclick="go('resume')">Resume</button>
-  <button onclick="go('contact')">Contact</button>
+
+<h2>Swathi S</h2>
+
+<div class="nav-links">
+
+<button onclick="go('home')">Home</button> <button onclick="go('projects')">Projects</button> <button onclick="go('skills')">Skills</button> <button onclick="go('github')">GitHub</button> <button onclick="go('certificates')">Certificates</button> <button onclick="go('resume')">Resume</button> <button onclick="go('contact')">Contact</button>
+
+</div>
+
 </nav>
 
-<!-- HOME / ABOUT -->
+<div class="app">
+
 <section id="home" class="screen active">
-  <h1 style="color:#38bdf8">Swathi Senthil Kumar</h1>
-  <p><strong>B.Tech Information Technology (2025)</strong></p>
-  <p>Software • Cloud • AI/ML • Data Analytics</p>
 
-  <p style="max-width:900px;line-height:1.7;margin-top:20px">
-    I am a B.Tech Information Technology graduate with strong foundations in software development, cloud computing, artificial intelligence, and data analytics.
-    I have hands-on experience through internships, industry-recognized certifications and real-world academic projects.
-    I enjoy building practical, scalable solutions using modern technologies and continuously upskilling to stay aligned with industry standards.
-  </p>
+<h1>Swathi Senthil Kumar</h1>
 
-  <div class="grid">
-    <div class="card" onclick="go('projects')">
-      <h3>Projects</h3>
-      <p>AI, ML, cloud, and full-stack applications with GitHub source code.</p>
-    </div>
-    <div class="card" onclick="go('certificates')">
-      <h3>Certificates</h3>
-      <p>Professional certifications from TCS, AWS, Oracle, Cisco, and more.</p>
-    </div>
-    <div class="card" onclick="go('resume')">
-      <h3>Resume</h3>
-      <p>View and download my latest resume.</p>
-    </div>
-  </div>
+<p>Software Developer | Cloud | AI Enthusiast</p>
+
+<button class="mainBtn" onclick="go('projects')">
+Explore My Work
+</button>
+
 </section>
 
-<!-- PROJECTS -->
+<section id="skills" class="screen">
+
+<h2>Tech Stack</h2>
+
+<div class="icons">
+
+<i class="devicon-python-plain"></i> <i class="devicon-java-plain"></i> <i class="devicon-javascript-plain"></i> <i class="devicon-react-original"></i> <i class="devicon-nodejs-plain"></i> <i class="devicon-mongodb-plain"></i> <i class="devicon-amazonwebservices-original"></i> <i class="devicon-googlecloud-plain"></i>
+
+</div>
+
+<h2>Skill Levels</h2>
+
+<div class="skills">
+
+<p>Python</p>
+<div class="bar"><span style="width:85%"></span></div>
+
+<p>Java</p>
+<div class="bar"><span style="width:80%"></span></div>
+
+<p>JavaScript</p>
+<div class="bar"><span style="width:75%"></span></div>
+
+<p>Cloud</p>
+<div class="bar"><span style="width:70%"></span></div>
+
+</div>
+
+</section>
+
 <section id="projects" class="screen">
-  <h2>Projects</h2>
 
-  <div class="grid">
-    <div class="card" onclick="window.open('https://github.com/Swazk/Personal-Health-Guardian')">
-      <h3>Google GenAI – Personal Health Guardian</h3>
-      <p>Generative AI healthcare assistant built using LLM concepts and prompt engineering.</p>
-    </div>
+<h2>Projects</h2>
 
-    <div class="card" onclick="window.open('https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-')">
-      <h3>AI Wellness Chatbot</h3>
-      <p>NLP-based chatbot focused on psychological wellness and supportive conversations.</p>
-    </div>
+<div class="grid">
 
-    <div class="card" onclick="window.open('https://github.com/Swazk/fraud-detection-risk-analysis')">
-      <h3>Fraud Detection & Risk Analysis</h3>
-      <p>Machine learning and data analytics project with EDA and visualization.</p>
-    </div>
+<div class="card"
+onclick="window.open('https://github.com/Swazk/Personal-Health-Guardian')">
 
-    <div class="card" onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')">
-      <h3>MERN Freelancing Platform</h3>
-      <p>Full-stack freelancing platform using MongoDB, Express, React, and Node.js.</p>
-    </div>
+<h3>Google GenAI Personal Health Guardian</h3>
 
-    <div class="card" onclick="window.open('https://github.com/Swazk/TNSDC-GAN-AI')">
-      <h3>GAN AI Project (TNSDC)</h3>
-      <p>Generative Adversarial Network project under TNSDC AI program.</p>
-    </div>
-  </div>
+</div>
+
+<div class="card"
+onclick="window.open('https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-')">
+
+<h3>AI Psychological Chatbot</h3>
+
+</div>
+
+<div class="card"
+onclick="window.open('https://github.com/Swazk/fraud-detection-risk-analysis')">
+
+<h3>Fraud Detection Analysis</h3>
+
+</div>
+
+<div class="card"
+onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')">
+
+<h3>MERN Freelancing Platform</h3>
+
+</div>
+
+<div class="card"
+onclick="window.open('https://github.com/Swazk/TNSDC-GAN-AI')">
+
+<h3>GAN AI Project</h3>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- CERTIFICATES -->
+<section id="github" class="screen">
+
+<h2>GitHub Contributions</h2>
+
+<div class="calendar"></div>
+
+</section>
+
 <section id="certificates" class="screen">
-  <h2>Certificates</h2>
 
-  <div class="grid">
-    <div class="card" onclick="go('cert-tcs')"><h3>TCS</h3></div>
-    <div class="card" onclick="go('cert-aws')"><h3>AWS</h3></div>
-    <div class="card" onclick="go('cert-oracle')"><h3>Oracle</h3></div>
-    <div class="card" onclick="go('cert-cisco')"><h3>Cisco</h3></div>
-    <div class="card" onclick="go('cert-others')"><h3>Others</h3></div>
-  </div>
+<h2>Certificates</h2>
+
+<div class="grid">
+
+<div class="card" onclick="openCert('tcs-1.pdf')">TCS</div>
+<div class="card" onclick="openCert('aws-1.pdf')">AWS</div>
+<div class="card" onclick="openCert('oracle-1.pdf')">Oracle</div>
+<div class="card" onclick="openCert('cisco-1.pdf')">Cisco</div>
+<div class="card" onclick="openCert('jpm-1.pdf')">JPMorgan</div>
+<div class="card" onclick="openCert('deloitte-1.pdf')">Deloitte</div>
+
+</div>
+
 </section>
 
-<!-- CERT LISTS -->
-<section id="cert-tcs" class="screen">
-  <div class="grid">
-    <div class="card" onclick="openCert('tcs-1.pdf')">TCS Certificate 1</div>
-    <div class="card" onclick="openCert('tcs-2.pdf')">TCS Certificate 2</div>
-    <div class="card" onclick="openCert('tcs-3.pdf')">TCS Certificate 3</div>
-  </div>
-</section>
-
-<section id="cert-aws" class="screen">
-  <div class="grid">
-    <div class="card" onclick="openCert('aws-1.pdf')">AWS Certificate 1</div>
-    <div class="card" onclick="openCert('aws-2.pdf')">AWS Certificate 2</div>
-  </div>
-</section>
-
-<section id="cert-oracle" class="screen">
-  <div class="grid">
-    <div class="card" onclick="openCert('oracle-1.pdf')">Oracle Certificate 1</div>
-    <div class="card" onclick="openCert('oracle-2.pdf')">Oracle Certificate 2</div>
-    <div class="card" onclick="openCert('oracle-3.pdf')">Oracle Certificate 3</div>
-  </div>
-</section>
-
-<section id="cert-cisco" class="screen">
-  <div class="grid">
-    <div class="card" onclick="openCert('cisco-1.pdf')">Cisco Certificate 1</div>
-    <div class="card" onclick="openCert('cisco-2.pdf')">Cisco Certificate 2</div>
-  </div>
-</section>
-
-<section id="cert-others" class="screen">
-  <div class="grid">
-    <div class="card" onclick="openCert('infosys-1.pdf')">Infosys</div>
-    <div class="card" onclick="openCert('jpm-1.pdf')">JPMorgan</div>
-    <div class="card" onclick="openCert('jpm-2.pdf')">JPMorgan</div>
-    <div class="card" onclick="openCert('deloitte-1.pdf')">Deloitte</div>
-  </div>
-</section>
-
-<!-- RESUME -->
 <section id="resume" class="screen">
-  <embed src="resume.pdf">
+
+<h2>Resume</h2>
+
+<embed src="resume.pdf" width="80%" height="600px">
+
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="screen">
-  <h2 style="text-align:center">Contact Me</h2>
 
-  <p style="text-align:center;max-width:700px;margin:20px auto;line-height:1.7">
-    Feel free to reach out to me for job opportunities, internships, collaborations,
-    or professional discussions. I am always open to learning and connecting.
-  </p>
+<h2>Contact</h2>
 
-  <div class="grid">
+<p>Email: swathisenthilkumar017@gmail.com</p>
 
-    <!-- PHONE -->
-    <a class="card" href="tel:+916369304900">
-      <h3><i class="fas fa-phone"></i></h3>
-      <p>Phone</p>
-    </a>
+<p>
+<a href="https://github.com/Swazk" target="_blank">GitHub</a>
+</p>
 
-    <!-- EMAIL -->
-    <a class="card" href="mailto:swathisenthilkumar017@gmail.com">
-      <h3><i class="fas fa-envelope"></i></h3>
-      <p>Email</p>
-    </a>
+<p>
+<a href="https://linkedin.com" target="_blank">LinkedIn</a>
+</p>
 
-    <!-- LINKEDIN -->
-    <a class="card" href="https://www.linkedin.com/in/swathi-s-7788b5269" target="_blank">
-      <h3><i class="fab fa-linkedin"></i></h3>
-      <p>LinkedIn</p>
-    </a>
-
-    <!-- GITHUB -->
-    <a class="card" href="https://github.com/Swazk" target="_blank">
-      <h3><i class="fab fa-github"></i></h3>
-      <p>GitHub</p>
-    </a>
-
-  </div>
 </section>
+
 </div>
 
-<!-- MODAL -->
-<div id="modal" class="modal" onclick="closeModal()">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <embed id="modalFile">
-    <a id="downloadBtn" download>Download Certificate</a>
-  </div>
+<div id="chatbot">
+
+<div id="chatHeader">Portfolio Assistant</div>
+
+<div id="chatMessages"></div>
+
+<input id="chatInput" placeholder="Ask about my projects">
+
 </div>
 
-<script>
-function showScreen(id){
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
-  const el=document.getElementById(id);
-  if(el) el.classList.add('active');
-}
-
-function go(id){ location.hash=id; }
-
-window.addEventListener('hashchange',()=>{
-  const page=location.hash.replace('#','')||'home';
-  showScreen(page);
-});
-
-window.addEventListener('load',()=>{
-  const page=location.hash.replace('#','')||'home';
-  showScreen(page);
-});
-
-function openCert(file){
-  document.getElementById('modal').classList.add('active');
-  document.getElementById('modalFile').src=file;
-  document.getElementById('downloadBtn').href=file;
-}
-
-function closeModal(){
-  document.getElementById('modal').classList.remove('active');
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
