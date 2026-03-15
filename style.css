@@ -1,7 +1,7 @@
 body{
 margin:0;
 font-family:Arial;
-background:linear-gradient(180deg,#020617,#0f172a);
+background:#020617;
 color:white;
 }
 
@@ -11,7 +11,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-z-index:-2;
+z-index:-1;
 }
 
 .navbar{
@@ -20,7 +20,7 @@ justify-content:space-between;
 padding:20px;
 }
 
-.nav-links button{
+.navbar button{
 background:none;
 border:none;
 color:white;
@@ -50,38 +50,68 @@ cursor:pointer;
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:25px;
+gap:20px;
 }
 
 .card{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-border:1px solid rgba(255,255,255,0.1);
+background:rgba(255,255,255,0.08);
 padding:25px;
-border-radius:20px;
+border-radius:15px;
 cursor:pointer;
-width:220px;
 transition:0.3s;
 }
 
 .card:hover{
-transform:scale(1.08);
+transform:scale(1.1);
 }
 
-.icons{
-font-size:60px;
+.tech-stack{
 display:flex;
 justify-content:center;
+flex-wrap:wrap;
 gap:30px;
-margin-bottom:30px;
+margin-top:30px;
+}
+
+.tech{
+font-size:50px;
+animation:float 4s infinite;
+}
+
+@keyframes float{
+
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+
+}
+
+.contact-icons{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:40px;
+}
+
+.contact-icons img{
+width:60px;
+background:rgba(255,255,255,0.1);
+padding:12px;
+border-radius:50%;
+transition:0.3s;
+}
+
+.contact-icons img:hover{
+transform:scale(1.2);
+background:#38bdf8;
 }
 
 #chatIcon{
 position:fixed;
 bottom:25px;
 right:25px;
-width:55px;
-height:55px;
+width:60px;
+height:60px;
 background:#38bdf8;
 border-radius:50%;
 display:flex;
@@ -93,18 +123,18 @@ cursor:pointer;
 
 #chatWindow{
 position:fixed;
-bottom:90px;
+bottom:95px;
 right:25px;
 width:260px;
 background:#0f172a;
-border-radius:10px;
 display:none;
+border-radius:10px;
 }
 
 #chatHeader{
 background:#38bdf8;
 color:black;
-padding:8px;
+padding:10px;
 }
 
 #chatMessages{
@@ -115,6 +145,6 @@ padding:10px;
 
 #chatInput{
 width:100%;
-border:none;
 padding:8px;
+border:none;
 }
