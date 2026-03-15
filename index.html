@@ -27,13 +27,17 @@ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.c
 <canvas id="galaxy"></canvas>
 
 <nav class="navbar">
-
 <h2>Swathi S</h2>
 
 <div class="nav-links">
-
-<button onclick="go('home')">Home</button> <button onclick="go('projects')">Projects</button> <button onclick="go('skills')">Skills</button> <button onclick="go('github')">GitHub</button> <button onclick="go('certificates')">Certificates</button> <button onclick="go('resume')">Resume</button> <button onclick="go('contact')">Contact</button>
-
+<button onclick="go('home')">Home</button>
+<button onclick="go('projects')">Projects</button>
+<button onclick="go('skills')">Skills</button>
+<button onclick="go('devops')">DevOps</button>
+<button onclick="go('github')">GitHub</button>
+<button onclick="go('certificates')">Certificates</button>
+<button onclick="go('resume')">Resume</button>
+<button onclick="go('contact')">Contact</button>
 </div>
 
 </nav>
@@ -43,9 +47,10 @@ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.c
 <section id="home" class="screen active">
 
 <h1>Swathi Senthil Kumar</h1>
-
-<p>Software Developer | Cloud | AI Enthusiast</p>
-
+<p>Software Developer | Cloud | AI</p>
+<p>B.Tech IT graduate (2025) with strong foundations in software development, cloud computing, AI/ML, and data analytics.
+  Skilled in C, Java, Python, JavaScript, SQL, and modern web frameworks.
+  Certified across Google Cloud, AWS, Oracle University, Cisco (CCNA), TCS, Deloitte, and JPMorgan, demonstrating adaptability to software, cloud, data, and cybersecurity environments. Passionate about building efficient, scalable solutions and contributing to real-world engineering projects.</p>
 <button class="mainBtn" onclick="go('projects')">
 Explore My Work
 </button>
@@ -62,23 +67,7 @@ Explore My Work
 
 </div>
 
-<h2>Skill Levels</h2>
-
-<div class="skills">
-
-<p>Python</p>
-<div class="bar"><span style="width:85%"></span></div>
-
-<p>Java</p>
-<div class="bar"><span style="width:80%"></span></div>
-
-<p>JavaScript</p>
-<div class="bar"><span style="width:75%"></span></div>
-
-<p>Cloud</p>
-<div class="bar"><span style="width:70%"></span></div>
-
-</div>
+<div id="tech3d"></div>
 
 </section>
 
@@ -90,38 +79,42 @@ Explore My Work
 
 <div class="card"
 onclick="window.open('https://github.com/Swazk/Personal-Health-Guardian')">
-
 <h3>Google GenAI Personal Health Guardian</h3>
-
+<p>AI based healthcare assistant</p>
 </div>
 
 <div class="card"
 onclick="window.open('https://github.com/Swazk/AI---driven-psychological-wellness-chatbot-Final-Year-Project-')">
-
 <h3>AI Psychological Chatbot</h3>
-
+<p>ML chatbot for mental health</p>
 </div>
 
 <div class="card"
 onclick="window.open('https://github.com/Swazk/fraud-detection-risk-analysis')">
-
-<h3>Fraud Detection Analysis</h3>
-
+<h3>Fraud Detection System</h3>
+<p>Risk analysis using data science</p>
 </div>
 
 <div class="card"
 onclick="window.open('https://github.com/dharshinijayaraj/freelancing_website')">
-
 <h3>MERN Freelancing Platform</h3>
+<p>Full stack marketplace</p>
+</div>
 
 </div>
 
-<div class="card"
-onclick="window.open('https://github.com/Swazk/TNSDC-GAN-AI')">
+</section>
 
-<h3>GAN AI Project</h3>
+<section id="devops" class="screen">
 
-</div>
+<h2>DevOps Architecture</h2>
+
+<div class="grid">
+
+<div class="card">Docker Container</div>
+<div class="card">CI/CD Pipeline</div>
+<div class="card">Kubernetes Deployment</div>
+<div class="card">AWS Cloud Hosting</div>
 
 </div>
 
@@ -129,7 +122,7 @@ onclick="window.open('https://github.com/Swazk/TNSDC-GAN-AI')">
 
 <section id="github" class="screen">
 
-<h2>GitHub Contributions</h2>
+<h2>GitHub Activity</h2>
 
 <div class="calendar"></div>
 
@@ -141,10 +134,10 @@ onclick="window.open('https://github.com/Swazk/TNSDC-GAN-AI')">
 
 <div class="grid">
 
-<div class="card" onclick="openCert('tcs-1.pdf')">TCS</div>
 <div class="card" onclick="openCert('aws-1.pdf')">AWS</div>
-<div class="card" onclick="openCert('oracle-1.pdf')">Oracle</div>
 <div class="card" onclick="openCert('cisco-1.pdf')">Cisco</div>
+<div class="card" onclick="openCert('oracle-1.pdf')">Oracle</div>
+<div class="card" onclick="openCert('tcs-1.pdf')">TCS</div>
 <div class="card" onclick="openCert('jpm-1.pdf')">JPMorgan</div>
 <div class="card" onclick="openCert('deloitte-1.pdf')">Deloitte</div>
 
@@ -178,13 +171,15 @@ onclick="window.open('https://github.com/Swazk/TNSDC-GAN-AI')">
 
 </div>
 
-<div id="chatbot">
+<div id="chatIcon">💬</div>
 
-<div id="chatHeader">Portfolio Assistant</div>
+<div id="chatWindow">
+
+<div id="chatHeader">AI Assistant</div>
 
 <div id="chatMessages"></div>
 
-<input id="chatInput" placeholder="Ask about my projects">
+<input id="chatInput" placeholder="Ask about Swathi">
 
 </div>
 
