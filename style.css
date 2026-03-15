@@ -70,11 +70,21 @@ margin:auto;
 line-height:1.6;
 }
 
-.github img{
-margin-top:30px;
-max-width:450px;
+.github-stats{
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+
 }
 
+.github-stats img{
+
+width:420px;
+border-radius:10px;
+}
 
 .grid{
 display:grid;
