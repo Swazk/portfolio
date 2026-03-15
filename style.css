@@ -1,7 +1,7 @@
 body{
 margin:0;
 font-family:Arial;
-background:#020617;
+background:linear-gradient(180deg,#020617,#0f172a);
 color:white;
 }
 
@@ -11,7 +11,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-z-index:-1;
+z-index:-2;
 }
 
 .navbar{
@@ -26,7 +26,6 @@ border:none;
 color:white;
 margin-left:10px;
 cursor:pointer;
-font-size:14px;
 }
 
 .screen{
@@ -55,61 +54,61 @@ gap:25px;
 }
 
 .card{
-background:#0f172a;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.1);
 padding:25px;
-border-radius:15px;
+border-radius:20px;
 cursor:pointer;
+width:220px;
 transition:0.3s;
-width:200px;
 }
 
 .card:hover{
-transform:perspective(900px) rotateX(8deg) rotateY(-8deg);
+transform:scale(1.08);
 }
 
 .icons{
 font-size:60px;
 display:flex;
 justify-content:center;
-gap:25px;
-margin-bottom:40px;
+gap:30px;
+margin-bottom:30px;
 }
 
-.skills{
-width:300px;
-margin:auto;
-}
-
-.bar{
-background:#111;
-height:10px;
-border-radius:10px;
-margin-bottom:20px;
-}
-
-.bar span{
-display:block;
-height:10px;
-background:#38bdf8;
-}
-
-#chatbot{
+#chatIcon{
 position:fixed;
-bottom:20px;
-right:20px;
+bottom:25px;
+right:25px;
+width:55px;
+height:55px;
+background:#38bdf8;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+cursor:pointer;
+}
+
+#chatWindow{
+position:fixed;
+bottom:90px;
+right:25px;
 width:260px;
-background:#111;
+background:#0f172a;
 border-radius:10px;
+display:none;
 }
 
 #chatHeader{
 background:#38bdf8;
-color:#020617;
+color:black;
 padding:8px;
 }
 
 #chatMessages{
-height:180px;
+height:200px;
 overflow:auto;
 padding:10px;
 }
