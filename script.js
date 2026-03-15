@@ -1,76 +1,72 @@
 function go(section){
 
-const screens = document.querySelectorAll(".screen")
+document.querySelectorAll(".screen")
+.forEach(s=>s.classList.remove("active"))
 
-screens.forEach(s=>{
-s.classList.remove("active")
-})
+document.getElementById(section)
+.classList.add("active")
 
-const target = document.getElementById(section)
-
-if(target){
-target.classList.add("active")
-}
-
-history.pushState(
-{page:section},
-"",
-"#"+section
-)
+history.pushState({page:section},"","#"+section)
 
 }
 
-
-window.onpopstate = function(event){
-
-const screens = document.querySelectorAll(".screen")
-
-screens.forEach(s=>{
-s.classList.remove("active")
-})
+window.onpopstate=function(e){
 
 let page="home"
 
-if(event.state && event.state.page){
-page=event.state.page
-}
-else if(location.hash){
-page=location.hash.replace("#","")
+if(e.state){
+page=e.state.page
 }
 
-const target=document.getElementById(page)
+document.querySelectorAll(".screen")
+.forEach(s=>s.classList.remove("active"))
 
-if(target){
-target.classList.add("active")
-}
+document.getElementById(page)
+.classList.add("active")
 
 }
 
+function openCert(file){
 
-window.onload=function(){
-
-let page=location.hash.replace("#","")
-
-if(!page){
-page="home"
-}
-
-go(page)
-
-initGalaxy()
-
-initTimelineAnimation()
-
-initProjectTilt()
+window.open(file,"_blank")
 
 }
 
 
-function initGalaxy(){
+const chatIcon=document.getElementById("chatIcon")
+const chatWindow=document.getElementById("chatWindow")
+const chatInput=document.getElementById("chatInput")
+const chatMessages=document.getElementById("chatMessages")
+
+chatIcon.onclick=()=>{
+
+chatWindow.style.display=
+chatWindow.style.display==="flex"?"none":"flex"
+
+}
+
+chatInput.addEventListener("keypress",function(e){
+
+if(e.key==="Enter"){
+
+let msg=chatInput.value
+
+chatMessages.innerHTML+=
+"<div><b>You:</b> "+msg+"</div>"
+
+let reply="You can ask about Swathi's projects, skills, internships, or certifications."
+
+chatMessages.innerHTML+=
+"<div><b>Bot:</b> "+reply+"</div>"
+
+chatInput.value=""
+
+}
+
+})
+
 
 const canvas=document.querySelector("#galaxy")
-
-if(!canvas) return
 
 const scene=new THREE.Scene()
 
@@ -82,8 +78,7 @@ window.innerWidth/window.innerHeight,
 )
 
 const renderer=new THREE.WebGLRenderer({
-canvas:canvas,
-alpha:true
+canvas:canvas
 })
 
 renderer.setSize(window.innerWidth,window.innerHeight)
@@ -92,21 +87,21 @@ camera.position.z=5
 
 const starsGeometry=new THREE.BufferGeometry()
 
-const starCount=6000
+const starCount=3000
 
-const positions=[]
+const pos=[]
 
 for(let i=0;i<starCount;i++){
 
-positions.push((Math.random()-0.5)*300)
-positions.push((Math.random()-0.5)*300)
-positions.push((Math.random()-0.5)*300)
+pos.push((Math.random()-0.5)*200)
+pos.push((Math.random()-0.5)*200)
+pos.push((Math.random()-0.5)*200)
 
 }
 
 starsGeometry.setAttribute(
 "position",
-new THREE.Float32BufferAttribute(positions,3)
+new THREE.Float32BufferAttribute(pos,3)
 )
 
 const starsMaterial=new THREE.PointsMaterial({
@@ -114,96 +109,18 @@ color:0xffffff,
 size:0.7
 })
 
-const starMesh=new THREE.Points(starsGeometry,starsMaterial)
+const stars=new THREE.Points(starsGeometry,starsMaterial)
 
-scene.add(starMesh)
+scene.add(stars)
 
 function animate(){
 
 requestAnimationFrame(animate)
 
-starMesh.rotation.y+=0.0006
-starMesh.rotation.x+=0.0003
+stars.rotation.y+=0.0004
 
 renderer.render(scene,camera)
 
 }
 
 animate()
-
-}
-
-
-function initTimelineAnimation(){
-
-const items=document.querySelectorAll(".timeline-content")
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-entry.target.classList.add("show")
-}
-
-})
-
-},{
-threshold:0.3
-})
-
-items.forEach(item=>{
-observer.observe(item)
-})
-
-}
-
-
-function initProjectTilt(){
-
-const cards=document.querySelectorAll(".card")
-
-cards.forEach(card=>{
-
-card.addEventListener("mousemove",e=>{
-
-const rect=card.getBoundingClientRect()
-
-const x=e.clientX-rect.left
-const y=e.clientY-rect.top
-
-const centerX=rect.width/2
-const centerY=rect.height/2
-
-const rotateX=(y-centerY)/10
-const rotateY=(centerX-x)/10
-
-card.style.transform=
-`rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`
-
-})
-
-card.addEventListener("mouseleave",()=>{
-
-card.style.transform="rotateX(0) rotateY(0)"
-
-})
-
-})
-
-}
-
-
-function toggleChat(){
-
-const chat=document.getElementById("chatbot")
-
-if(!chat) return
-
-if(chat.style.display==="flex"){
-chat.style.display="none"
-}
-else{
-chat.style.display="flex"
-}
-}
