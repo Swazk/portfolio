@@ -20,9 +20,6 @@ history.pushState(
 
 }
 
-/* ===============================
-BROWSER BACK BUTTON
-=============================== */
 
 window.onpopstate = function(event){
 
@@ -210,4 +207,3 @@ else{
 chat.style.display="flex"
 }
 }
-```
