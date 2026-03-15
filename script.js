@@ -8,9 +8,7 @@ document.getElementById(id).classList.add("active")
 }
 
 function openCert(file){
-
 window.open(file)
-
 }
 
 GitHubCalendar(".calendar","Swazk")
@@ -73,30 +71,43 @@ renderer.render(scene,camera)
 
 animate()
 
+const icon=document.getElementById("chatIcon")
+const chat=document.getElementById("chatWindow")
+
+icon.onclick=()=>{
+chat.style.display=chat.style.display==="block"?"none":"block"
+}
+
 const input=document.getElementById("chatInput")
 
 input.addEventListener("keypress",function(e){
 
 if(e.key==="Enter"){
 
-let text=input.value
+let text=input.value.toLowerCase()
 
 document.getElementById("chatMessages").innerHTML+=
 "<p><b>You:</b>"+text+"</p>"
 
-let reply="Ask about projects or skills."
+let reply="I can tell you about Swathi's projects, skills, certificates or contact."
 
-if(text.toLowerCase().includes("project"))
-reply="Swathi built AI Chatbot, Fraud Detection system and MERN Freelancing platform."
+if(text.includes("project"))
+reply="Swathi built AI chatbot, fraud detection system and MERN freelancing platform."
 
-if(text.toLowerCase().includes("contact"))
-reply="You can contact Swathi via email or LinkedIn."
+if(text.includes("skill"))
+reply="Python, Java, JavaScript, React, Node, Cloud and AI."
+
+if(text.includes("certificate"))
+reply="She has certifications from AWS, Cisco, Oracle, TCS, Deloitte and JPMorgan."
+
+if(text.includes("contact"))
+reply="Email: [swathisenthilkumar017@gmail.com](mailto:swathisenthilkumar017@gmail.com)"
 
 document.getElementById("chatMessages").innerHTML+=
-"<p><b>Bot:</b>"+reply+"</p>"
+"<p><b>AI:</b>"+reply+"</p>"
 
 input.value=""
 
 }
-  
+
 })
